@@ -1,186 +1,250 @@
+/* ============================================
+   i18n
+============================================ */
 const i18n = {
-    en:{
-        nav_about:'About',nav_skills:'Skills',nav_projects:'Projects',nav_contact:'Contact',
-        hero_tag:'OPEN TO OPPORTUNITIES',hero_greeting:"👋 Hey, I'm —",
-        hero_btn1:'My Projects →',hero_btn2:'Get in Touch',
-        hero_avail:'Available for freelance & internship',scroll:'SCROLL',
-        about_tag:'01 · ABOUT ME',student_badge:'STUDENT · M.Kh. Dulaty University',
-        about_h:'I build <span class="acc">reliable</span><br>backend systems',
-        about_p1:'I\'m <strong>Yerasyl</strong> — a backend developer and student at M.Kh. Dulaty Taraz University. I write clean, fast, and scalable code that powers real-world applications.',
-        about_p2:'My passion is <strong>building the engine behind the scenes</strong> — databases, APIs, server logic. Great software starts with a rock-solid backend foundation.',
-        about_p3:'I work on a <strong>MacBook Air M4</strong> — fast, quiet, and efficient. Always learning, always shipping.',
-        edu_title:'M.Kh. Dulaty Taraz University',
-        edu_desc:'Faculty of Technology · Department of Information Systems<br>Specialty: Information Systems and Technology',
-        stat_projects:'PROJECTS',stat_tech:'TECHNOLOGIES',stat_months:'MONTHS XP',stat_hunger:'HUNGER',
-        about_cta:'Work With Me →',skills_tag:'02 · SKILLS & TECH',
-        skills_h:'My <span class="acc">stack</span>',skill_pc:'PC Proficiency',
-        tools_label:'TOOLS & ENVIRONMENT',proj_tag:'03 · PROJECTS',
-        proj_h:'My <span class="acc">work</span>',
-        p1_title:'Portfolio Website',p1_desc:'Personal portfolio — modern design, animations, responsive layout, multilingual support. Built entirely from scratch.',
-        p2_title:'Project 02',p3_title:'Project 03',
-        coming_soon:'Coming soon...',soon:'Soon',stay_tuned:'Stay tuned →',view:'View →',
-        contact_tag:'04 · CONTACT',
-        contact_h:'Got a project?<br><span class="acc">Let\'s talk.</span>',
-        contact_sub:"I'm always open to new opportunities, collaborations, and interesting projects. Don't hesitate to reach out!",
-        email_label:'EMAIL',contact_btn:'Send a Message →',
-        footer_copy:'© 2026 · All rights reserved',footer_loc:'Taraz, Kazakhstan'
+    ru: {
+        nav_about: 'Обо мне', nav_skills: 'Навыки', nav_projects: 'Проекты', nav_contact: 'Контакт',
+        hero_badge: 'Открыт к предложениям', hero_hi: '👋 Привет, я —',
+        btn_projects: 'Мои проекты', btn_contact: 'Связаться',
+        about_title: 'Строю надёжные<br><em>бэкенд-системы</em>',
+        about_p1: 'Я <strong>Ерасыл</strong> — backend-разработчик и студент Тарасского университета им. М.Х. Дулати. Пишу чистый, производительный и масштабируемый код для реальных задач.',
+        about_p2: 'Моя стихия — <strong>архитектура серверной части</strong>: базы данных, API, бизнес-логика. Убеждён: великий продукт начинается с крепкого бэкенда.',
+        about_p3: 'Работаю на <strong>MacBook Air M4</strong> — молниеносно, тихо, эффективно. Всегда учусь, всегда пишу код.',
+        edu_name: 'М.Х. Дулати атындағы ТарМУ',
+        edu_detail: 'Технологический корпус · Кафедра ИС · ИСТ · 2022–2026',
+        stat_proj: 'Проекта', stat_tech: 'Технологий', stat_months: 'Месяцев опыта', stat_hunger: 'Жажда роста',
+        about_cta: 'Работать вместе →',
+        skills_title: 'Мой <em>стек</em>',
+        sk_advanced: 'Продвинутый', sk_mid: 'Средний', sk_good: 'Хорошо', sk_pc: 'Владение ПК',
+        tools_label: 'Инструменты и среда',
+        proj_title: 'Мои <em>работы</em>',
+        proj_live: 'Live', proj_soon: 'Скоро',
+        proj1_name: 'Portfolio Website',
+        proj1_desc: 'Персональный сайт-портфолио — современный дизайн, анимации, адаптивная вёрстка, поддержка 3 языков. Написан с нуля без фреймворков.',
+        proj2_name: 'Проект 02', proj3_name: 'Проект 03',
+        proj_coming: 'В разработке...', proj_view: 'Открыть →', stay_tuned: 'Ждите →',
+        contact_title: 'Есть проект?<br><em>Пишите.</em>',
+        contact_sub: 'Открыт к фрилансу, стажировкам и интересным коллаборациям. Не стесняйтесь — пишите!',
+        cc_email: 'Email', contact_btn: 'Отправить сообщение →',
+        footer_copy: '© 2026 · Все права защищены', footer_loc: 'Тараз, Казахстан',
+        scroll: 'scroll'
     },
-    ru:{
-        nav_about:'Обо мне',nav_skills:'Навыки',nav_projects:'Проекты',nav_contact:'Контакт',
-        hero_tag:'ОТКРЫТ К ПРЕДЛОЖЕНИЯМ',hero_greeting:'👋 Привет, я —',
-        hero_btn1:'Мои проекты →',hero_btn2:'Написать мне',
-        hero_avail:'Доступен для фриланса и стажировки',scroll:'СКРОЛЛ',
-        about_tag:'01 · ОБО МНЕ',student_badge:'СТУДЕНТ · Университет им. М.Х. Дулати',
-        about_h:'Создаю <span class="acc">надёжные</span><br>бэкенд-системы',
-        about_p1:'Я <strong>Ерасыл</strong> — бэкенд-разработчик и студент Тарасского университета им. М.Х. Дулати.',
-        about_p2:'Мой интерес — <strong>строить движок за кулисами</strong>: базы данных, API, серверная логика.',
-        about_p3:'Работаю на <strong>MacBook Air M4</strong> — скорость, тишина и эффективность.',
-        edu_title:'Университет им. М.Х. Дулати, Тараз',
-        edu_desc:'Технологический корпус · Кафедра Информационных систем<br>Специальность: Информационные системы и технологии',
-        stat_projects:'ПРОЕКТЫ',stat_tech:'ТЕХНОЛОГИИ',stat_months:'МЕС. ОПЫТА',stat_hunger:'ЖАЖДА',
-        about_cta:'Работать вместе →',skills_tag:'02 · НАВЫКИ И ТЕХНОЛОГИИ',
-        skills_h:'Мой <span class="acc">стек</span>',skill_pc:'Владение ПК',
-        tools_label:'ИНСТРУМЕНТЫ И СРЕДА',proj_tag:'03 · ПРОЕКТЫ',
-        proj_h:'Мои <span class="acc">работы</span>',
-        p1_title:'Портфолио-сайт',p1_desc:'Личный портфолио — современный дизайн, анимации, адаптивная вёрстка, многоязычность. Написан с нуля.',
-        p2_title:'Проект 02',p3_title:'Проект 03',
-        coming_soon:'Скоро...',soon:'Скоро',stay_tuned:'Ждите →',view:'Смотреть →',
-        contact_tag:'04 · КОНТАКТ',
-        contact_h:'Есть проект?<br><span class="acc">Пишите.</span>',
-        contact_sub:'Всегда открыт к новым возможностям, коллаборациям и интересным проектам.',
-        email_label:'ПОЧТА',contact_btn:'Написать сообщение →',
-        footer_copy:'© 2026 · Все права защищены',footer_loc:'Тараз, Казахстан'
+    en: {
+        nav_about: 'About', nav_skills: 'Skills', nav_projects: 'Projects', nav_contact: 'Contact',
+        hero_badge: 'Open to opportunities', hero_hi: '👋 Hey, I\'m —',
+        btn_projects: 'My Projects', btn_contact: 'Get in Touch',
+        about_title: 'Building reliable<br><em>backend systems</em>',
+        about_p1: 'I\'m <strong>Yerasyl</strong> — a backend developer and student at M.Kh. Dulaty Taraz University. I write clean, fast, scalable code for real-world applications.',
+        about_p2: 'My passion is <strong>engineering the server side</strong>: databases, APIs, business logic. Great products start with a rock-solid backend.',
+        about_p3: 'I work on a <strong>MacBook Air M4</strong> — fast, silent, efficient. Always learning, always coding.',
+        edu_name: 'M.Kh. Dulaty Taraz University',
+        edu_detail: 'Technology Faculty · Dept. of IS · IST · 2022–2026',
+        stat_proj: 'Projects', stat_tech: 'Technologies', stat_months: 'Months XP', stat_hunger: 'Hunger',
+        about_cta: 'Work With Me →',
+        skills_title: 'My <em>stack</em>',
+        sk_advanced: 'Advanced', sk_mid: 'Intermediate', sk_good: 'Good', sk_pc: 'PC Proficiency',
+        tools_label: 'Tools & Environment',
+        proj_title: 'My <em>work</em>',
+        proj_live: 'Live', proj_soon: 'Soon',
+        proj1_name: 'Portfolio Website',
+        proj1_desc: 'Personal portfolio — modern design, animations, responsive layout, 3-language support. Built from scratch without frameworks.',
+        proj2_name: 'Project 02', proj3_name: 'Project 03',
+        proj_coming: 'Coming soon...', proj_view: 'View →', stay_tuned: 'Stay tuned →',
+        contact_title: 'Got a project?<br><em>Let\'s talk.</em>',
+        contact_sub: 'Open to freelance, internships and interesting collaborations. Don\'t hesitate to reach out!',
+        cc_email: 'Email', contact_btn: 'Send a Message →',
+        footer_copy: '© 2026 · All rights reserved', footer_loc: 'Taraz, Kazakhstan',
+        scroll: 'scroll'
     },
-    kk:{
-        nav_about:'Мен туралы',nav_skills:'Білімдерім',nav_projects:'Жобалар',nav_contact:'Байланыс',
-        hero_tag:'МҮМКІНДІКТЕРГЕ АШЫҚПЫН',hero_greeting:'👋 Сәлем, мен —',
-        hero_btn1:'Жобаларым →',hero_btn2:'Байланысу',
-        hero_avail:'Фриланс және тәжірибеге дайынмын',scroll:'АЙНАЛДЫРУ',
-        about_tag:'01 · МЕН ТУРАЛЫ',student_badge:'СТУДЕНТ · М.Х. Дулати атындағы ТарМУ',
-        about_h:'<span class="acc">Сенімді</span> бэкенд<br>жүйелер жасаймын',
-        about_p1:'Мен <strong>Ерасыл</strong> — М.Х. Дулати атындағы ТарМУ студентімін және бэкенд-разработчикпін.',
-        about_p2:'Менің қызығушылығым — <strong>жасырын механизм жасау</strong>: дерекқорлар, API, сервер логикасы.',
-        about_p3:'<strong>MacBook Air M4</strong> — жұмысымды жылдам және тиімді ұстайды.',
-        edu_title:'М.Х. Дулати атындағы ТарМУ',
-        edu_desc:'Технологиялық корпус · Ақпараттық жүйелер кафедрасы<br>Мамандық: Ақпараттық жүйелер мен технологиялар',
-        stat_projects:'ЖОБА',stat_tech:'ТЕХНОЛОГИЯ',stat_months:'АЙ ТӘЖІРИБЕ',stat_hunger:'ЫНТА',
-        about_cta:'Бірге жұмыс →',skills_tag:'02 · БІЛІМДЕРІМ',
-        skills_h:'Менің <span class="acc">стегім</span>',skill_pc:'ДК меңгеру',
-        tools_label:'ҚҰРАЛДАР МЕН ОРТА',proj_tag:'03 · ЖОБАЛАР',
-        proj_h:'Менің <span class="acc">жұмыстарым</span>',
-        p1_title:'Портфолио сайт',p1_desc:'Жеке портфолио — заманауи дизайн, анимациялар, адаптивті, көптілді. Нөлден жазылды.',
-        p2_title:'Жоба 02',p3_title:'Жоба 03',
-        coming_soon:'Жақында...',soon:'Жақында',stay_tuned:'Күтіңіз →',view:'Көру →',
-        contact_tag:'04 · БАЙЛАНЫС',
-        contact_h:'Жоба бар ма?<br><span class="acc">Жазыңыз.</span>',
-        contact_sub:'Жаңа мүмкіндіктерге, ынтымақтастыққа және қызықты жобаларға әрдайым ашықпын!',
-        email_label:'ЭЛЕКТРОНДЫҚ ПОШТА',contact_btn:'Хабарлама жіберу →',
-        footer_copy:'© 2026 · Барлық құқықтар қорғалған',footer_loc:'Тараз, Қазақстан'
+    kk: {
+        nav_about: 'Мен туралы', nav_skills: 'Білімдерім', nav_projects: 'Жобалар', nav_contact: 'Байланыс',
+        hero_badge: 'Мүмкіндіктерге ашықпын', hero_hi: '👋 Сәлем, мен —',
+        btn_projects: 'Жобаларым', btn_contact: 'Байланысу',
+        about_title: '<em>Сенімді</em> бэкенд<br>жүйелер жасаймын',
+        about_p1: 'Мен <strong>Ерасыл</strong> — М.Х. Дулати атындағы ТарМУ студенті және бэкенд-разработчикпін. Нақты тапсырмалар үшін таза, жылдам код жазамын.',
+        about_p2: 'Менің стихиям — <strong>сервер жағын жасау</strong>: дерекқорлар, API, бизнес-логика. Керемет өнім мықты бэкендтен басталады.',
+        about_p3: '<strong>MacBook Air M4</strong> — жылдам, тыныш, тиімді. Әрдайым үйренемін, әрдайым код жазамын.',
+        edu_name: 'М.Х. Дулати атындағы ТарМУ',
+        edu_detail: 'Технологиялық корпус · АЖ кафедрасы · АЖТ · 2022–2026',
+        stat_proj: 'Жоба', stat_tech: 'Технология', stat_months: 'Ай тәжірибе', stat_hunger: 'Ынта',
+        about_cta: 'Бірге жұмыс →',
+        skills_title: 'Менің <em>стегім</em>',
+        sk_advanced: 'Жоғары', sk_mid: 'Орташа', sk_good: 'Жақсы', sk_pc: 'ДК меңгеру',
+        tools_label: 'Құралдар мен орта',
+        proj_title: 'Менің <em>жұмыстарым</em>',
+        proj_live: 'Live', proj_soon: 'Жақында',
+        proj1_name: 'Portfolio сайт',
+        proj1_desc: 'Жеке портфолио — заманауи дизайн, анимациялар, адаптивті, 3 тілді қолдайды. Нөлден жазылды.',
+        proj2_name: 'Жоба 02', proj3_name: 'Жоба 03',
+        proj_coming: 'Жақында...', proj_view: 'Ашу →', stay_tuned: 'Күтіңіз →',
+        contact_title: 'Жоба бар ма?<br><em>Жазыңыз.</em>',
+        contact_sub: 'Фриланс, тәжірибе және қызықты жобаларға әрдайым ашықпын!',
+        cc_email: 'Электрондық пошта', contact_btn: 'Хабарлама жіберу →',
+        footer_copy: '© 2026 · Барлық құқықтар қорғалған', footer_loc: 'Тараз, Қазақстан',
+        scroll: 'айналдыру'
     }
 };
 
-const roles = {
-    en: ['Backend Developer','C++ Engineer','Java Developer','Python Coder','Problem Solver'],
-    ru: ['Бэкенд-разработчик','C++ программист','Java разработчик','Python кодер','Решатель задач'],
-    kk: ['Бэкенд-разработчик','C++ бағдарламашы','Java разработчик','Python кодер','Есепші']
+const typedRoles = {
+    ru: ['Backend Developer', 'C++ разработчик', 'Java программист', 'Python разработчик', 'Problem Solver'],
+    en: ['Backend Developer', 'C++ Engineer', 'Java Developer', 'Python Coder', 'Problem Solver'],
+    kk: ['Backend Developer', 'C++ бағдарламашы', 'Java разработчик', 'Python кодер', 'Есепші']
 };
 
-let currentLang = 'en', typedIdx = 0, charIdx = 0, deleting = false, typedTimer;
+/* ============================================
+   STATE
+============================================ */
+let currentLang = 'ru';
+let typedIdx = 0, charIdx = 0, isDeleting = false, typedTimer = null;
 
-function typeRole() {
-    const roleList = roles[currentLang];
-    const role = roleList[typedIdx];
-    const el = document.getElementById('typed-role');
-    if (!el) return;
-    if (deleting) {
-        charIdx--;
-        el.textContent = role.substring(0, charIdx);
-        if (charIdx === 0) { deleting = false; typedIdx = (typedIdx + 1) % roleList.length; typedTimer = setTimeout(typeRole, 400); return; }
-        typedTimer = setTimeout(typeRole, 45);
-    } else {
-        charIdx++;
-        el.textContent = role.substring(0, charIdx);
-        if (charIdx === role.length) { typedTimer = setTimeout(() => { deleting = true; typeRole(); }, 2400); return; }
-        typedTimer = setTimeout(typeRole, 80);
-    }
-}
-
+/* ============================================
+   LANGUAGE
+============================================ */
 function applyLang(lang) {
     currentLang = lang;
-    const dict = i18n[lang];
+    const d = i18n[lang];
     document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.dataset.i18n;
-        if (dict[key] !== undefined) el.innerHTML = dict[key];
+        const k = el.dataset.i18n;
+        if (d[k] !== undefined) el.innerHTML = d[k];
     });
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-    clearTimeout(typedTimer); charIdx = 0; deleting = false; typedIdx = 0; typeRole();
+    document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+    });
+    clearTimeout(typedTimer);
+    typedIdx = 0; charIdx = 0; isDeleting = false;
+    typeEffect();
 }
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
 
-const themeBtn = document.getElementById('themeBtn');
-let dark = true;
-themeBtn.addEventListener('click', () => {
-    dark = !dark;
-    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-    themeBtn.textContent = dark ? '🌙' : '☀️';
+/* ============================================
+   TYPED EFFECT
+============================================ */
+function typeEffect() {
+    const el = document.getElementById('typed');
+    if (!el) return;
+    const list = typedRoles[currentLang];
+    const word = list[typedIdx];
+
+    if (isDeleting) {
+        charIdx--;
+        el.textContent = word.slice(0, charIdx);
+        if (charIdx === 0) {
+            isDeleting = false;
+            typedIdx = (typedIdx + 1) % list.length;
+            typedTimer = setTimeout(typeEffect, 350);
+        } else {
+            typedTimer = setTimeout(typeEffect, 40);
+        }
+    } else {
+        charIdx++;
+        el.textContent = word.slice(0, charIdx);
+        if (charIdx === word.length) {
+            typedTimer = setTimeout(() => { isDeleting = true; typeEffect(); }, 2200);
+        } else {
+            typedTimer = setTimeout(typeEffect, 75);
+        }
+    }
+}
+
+/* ============================================
+   THEME
+============================================ */
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('.theme-icon');
+let isDark = true;
+
+themeToggle.addEventListener('click', () => {
+    isDark = !isDark;
+    document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+    themeIcon.textContent = isDark ? '☀️' : '🌙';
 });
 
-const navbar = document.getElementById('navbar');
+/* ============================================
+   NAV SCROLL
+============================================ */
+const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
+    header.classList.toggle('scrolled', window.scrollY > 50);
 }, { passive: true });
 
+/* ============================================
+   BURGER
+============================================ */
 const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
+const mobileNav = document.getElementById('mobileNav');
 burger.addEventListener('click', () => {
     burger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+    mobileNav.classList.toggle('open');
 });
-document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => {
-    burger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-}));
+document.querySelectorAll('.mobile-link').forEach(l => {
+    l.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+    });
+});
 
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
+/* ============================================
+   CUSTOM CURSOR
+============================================ */
+const cursor = document.getElementById('cursor');
+const follower = document.getElementById('cursorFollower');
+let mx = 0, my = 0, fx = 0, fy = 0;
+
 document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
 }, { passive: true });
-(function animRing() {
-    rx += (mx - rx) * .12; ry += (my - ry) * .12;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(animRing);
+
+(function animFollower() {
+    fx += (mx - fx) * .1;
+    fy += (my - fy) * .1;
+    follower.style.left = fx + 'px';
+    follower.style.top = fy + 'px';
+    requestAnimationFrame(animFollower);
 })();
 
-document.querySelectorAll('a,button,.skill-card,.proj-card,.stat-box').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+document.querySelectorAll('a, button, .skill-card, .proj-card, .stat-item, .tool-chip, .contact-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); follower.classList.add('hover'); });
+    el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); follower.classList.remove('hover'); });
 });
 
-const revealObs = new IntersectionObserver(entries => {
+/* ============================================
+   INTERSECTION OBSERVER (AOS + counters + bars)
+============================================ */
+const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-        el.classList.add('visible');
-        el.querySelectorAll('.bar-fill').forEach(bar => { bar.style.width = bar.dataset.w + '%'; });
-        el.querySelectorAll('.stat-n[data-target]').forEach(n => {
-            const target = +n.dataset.target, step = target / 40;
+        el.classList.add('aos-animate');
+
+        // skill bars
+        el.querySelectorAll('.skill-fill').forEach(bar => {
+            bar.style.width = bar.dataset.w + '%';
+        });
+
+        // counters
+        el.querySelectorAll('.stat-num[data-target]').forEach(n => {
+            const target = +n.dataset.target;
+            const step = target / 45;
             let cur = 0;
             const t = setInterval(() => {
                 cur += step;
                 if (cur >= target) { n.textContent = target; clearInterval(t); }
                 else n.textContent = Math.floor(cur);
-            }, 30);
+            }, 28);
         });
-        revealObs.unobserve(el);
+
+        obs.unobserve(el);
     });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
 
-typeRole();
+/* ============================================
+   INIT
+============================================ */
+applyLang('ru');

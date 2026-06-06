@@ -1,91 +1,231 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Менің Портфолиом</title>
+    <title>ItYerasyl0.dev — Backend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- НАВИГАЦИЯ -->
-<nav>
-    <div class="logo">Ерасыл</div>
-    <ul>
-        <li><a href="#about">Мен туралы</a></li>
-        <li><a href="#skills">Білімдерім</a></li>
-        <li><a href="#projects">Жобалар</a></li>
-        <li><a href="#contact">Байланыс</a></li>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grid-bg"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<nav id="navbar">
+    <a href="#hero" class="logo">It<span class="num">Yerasyl</span><span class="dot">0</span>.dev</a>
+    <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="kk">KZ</button>
+        </div>
+        <button class="theme-btn" id="themeBtn">🌙</button>
+        <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
 </nav>
 
-<!-- БАСТЫ БЕТ -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mob-link" data-i18n="nav_about">About</a>
+    <a href="#skills" class="mob-link" data-i18n="nav_skills">Skills</a>
+    <a href="#projects" class="mob-link" data-i18n="nav_projects">Projects</a>
+    <a href="#contact" class="mob-link" data-i18n="nav_contact">Contact</a>
+    <div style="display:flex;gap:8px;margin-top:14px">
+        <button class="lang-btn" data-lang="en" style="border:1px solid var(--border);border-radius:8px;padding:8px 16px;background:var(--bg3);color:var(--muted2);cursor:pointer;font-family:var(--mono);font-size:12px">EN</button>
+        <button class="lang-btn" data-lang="ru" style="border:1px solid var(--border);border-radius:8px;padding:8px 16px;background:var(--bg3);color:var(--muted2);cursor:pointer;font-family:var(--mono);font-size:12px">RU</button>
+        <button class="lang-btn" data-lang="kk" style="border:1px solid var(--border);border-radius:8px;padding:8px 16px;background:var(--bg3);color:var(--muted2);cursor:pointer;font-family:var(--mono);font-size:12px">KZ</button>
+    </div>
+</div>
+
 <section id="hero">
-    <h1>Сәлем, мен — <span>Ерасыл</span></h1>
-    <p>Веб-разработчик | Тараз</p>
-    <a href="#contact" class="btn">Байланысу</a>
+    <div class="hero-grid">
+        <div class="hero-inner">
+            <div class="hero-tag">
+                <span class="dot-live"></span>
+                <span data-i18n="hero_tag">OPEN TO OPPORTUNITIES</span>
+            </div>
+            <p class="hero-greeting" data-i18n="hero_greeting">👋 Hey, I'm —</p>
+            <h1 class="hero-name">
+                <span class="line1">Yerasyl</span>
+                <span class="line2">Backend Dev</span>
+            </h1>
+            <p class="hero-role">
+                <span id="typed-role"></span>
+                <span class="sep">·</span>
+                <span class="highlight">Taraz, KZ</span>
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-accent" data-i18n="hero_btn1">My Projects →</a>
+                <a href="#contact" class="btn btn-ghost" data-i18n="hero_btn2">Get in Touch</a>
+                <a href="https://github.com" target="_blank" class="btn btn-purple">GitHub</a>
+            </div>
+            <div class="social-strip">
+                <a href="https://www.instagram.com/yeaska.exp/" target="_blank" rel="noopener" class="soc-link" title="Instagram">📸</a>
+                <a href="https://www.linkedin.com/in/yeraska-exp-4b735a387/" target="_blank" rel="noopener" class="soc-link" title="LinkedIn">💼</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="soc-link" title="GitHub">🐙</a>
+                <a href="https://t.me/exp075" target="_blank" rel="noopener" class="soc-link" title="Telegram">✈️</a>
+                <div class="soc-divider"></div>
+                <a href="mailto:ersik0358@gmail.com" class="soc-link" title="Email">📧</a>
+            </div>
+            <div class="avail-badge">
+                <span class="avail-dot"></span>
+                <span data-i18n="hero_avail">Available for freelance & internship</span>
+            </div>
+        </div>
+        <div class="terminal reveal">
+            <div class="terminal-bar">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green-mac"></span>
+                <span class="terminal-title">yerasyl@backend ~ $</span>
+            </div>
+            <div class="terminal-body">
+                <div class="t-line"><span class="t-prompt">➜</span> <span class="t-cmd">whoami</span></div>
+                <div class="t-line"><span class="t-str">Yerasyl</span> <span class="t-comment">// backend developer</span></div>
+                <div class="t-line" style="margin-top:8px"><span class="t-prompt">➜</span> <span class="t-cmd">cat skills.json</span></div>
+                <div class="t-line"><span class="t-comment">{</span></div>
+                <div class="t-line">&nbsp;&nbsp;<span class="t-fn">"languages"</span>: [<span class="t-str">"C++"</span>, <span class="t-str">"Java"</span>, <span class="t-str">"Python"</span>]</div>
+                <div class="t-line">&nbsp;&nbsp;<span class="t-fn">"tools"</span>: [<span class="t-str">"Git"</span>, <span class="t-str">"SQL"</span>, <span class="t-str">"GitHub"</span>]</div>
+                <div class="t-line">&nbsp;&nbsp;<span class="t-fn">"device"</span>: <span class="t-str">"MacBook Air M4"</span></div>
+                <div class="t-line"><span class="t-comment">}</span></div>
+                <div class="t-line" style="margin-top:8px"><span class="t-prompt">➜</span> <span class="t-cmd">./run career.sh</span></div>
+                <div class="t-line"><span class="t-fn">Building</span> future... <span class="t-num">██████░░</span> 75%</div>
+                <div class="t-line"><span class="t-prompt">➜</span> <span class="t-cursor-t"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-hint">
+        <div class="scroll-line"></div>
+        <span data-i18n="scroll">SCROLL</span>
+    </div>
 </section>
-<!-- МЕН ТУРАЛЫ -->
+
 <section id="about">
-    <h2>Мен туралы</h2>
-    <div class="about-content">
-        <p>Сәлем! Мен Ерасыл — ТарГУ Дулати университетінің ақпараттық жүйелер кафедрасының студентімін. Веб-разработка саласында өзімді дамытып жатырмын.</p>
-        <p>Мақсатым — сапалы сайттар жасап, клиенттерге көмектесу.</p>
+    <div class="section-tag"><span data-i18n="about_tag">01 · ABOUT ME</span></div>
+    <div class="about-grid reveal">
+        <div class="about-text">
+            <div class="about-badge">🎓 <span data-i18n="student_badge">STUDENT · M.Kh. Dulaty University</span></div>
+            <h2 class="section-h" data-i18n="about_h">I build <span class="acc">reliable</span><br>backend systems</h2>
+            <p data-i18n="about_p1">I'm <strong>Yerasyl</strong> — a backend developer and student at M.Kh. Dulaty Taraz University.</p>
+            <p data-i18n="about_p2">My passion is <strong>building the engine behind the scenes</strong> — databases, APIs, server logic.</p>
+            <p data-i18n="about_p3">I work on a <strong>MacBook Air M4</strong> — fast, quiet, and efficient. Always learning, always shipping.</p>
+            <div class="edu-card">
+                <h4 data-i18n="edu_title">M.Kh. Dulaty Taraz University</h4>
+                <p data-i18n="edu_desc">Faculty of Technology · Department of Information Systems<br>Specialty: Information Systems and Technology</p>
+                <div class="edu-meta">📍 Taraz, Kazakhstan · 2022–2026</div>
+            </div>
+        </div>
+        <div>
+            <div class="stats-grid">
+                <div class="stat-box"><span class="stat-n" data-target="3">0</span><span class="stat-l" data-i18n="stat_projects">PROJECTS</span></div>
+                <div class="stat-box"><span class="stat-n" data-target="6">0</span><span class="stat-l" data-i18n="stat_tech">TECHNOLOGIES</span></div>
+                <div class="stat-box"><span class="stat-n" data-target="12">0</span><span class="stat-l" data-i18n="stat_months">MONTHS XP</span></div>
+                <div class="stat-box"><span class="stat-n">∞</span><span class="stat-l" data-i18n="stat_hunger">HUNGER</span></div>
+            </div>
+            <a href="#contact" class="btn btn-accent" style="margin-top:20px;width:100%;justify-content:center" data-i18n="about_cta">Work With Me →</a>
+        </div>
     </div>
 </section>
 
-<!-- БІЛІМДЕРІМ -->
 <section id="skills">
-    <h2>Білімдерім</h2>
-    <div class="skills-grid">
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">React</div>
-        <div class="skill-card">Node.js</div>
-        <div class="skill-card">Git</div>
+    <div class="section-tag"><span data-i18n="skills_tag">02 · SKILLS & TECH</span></div>
+    <h2 class="section-h reveal" data-i18n="skills_h">My <span class="acc">stack</span></h2>
+    <div class="skills-grid reveal">
+        <div class="skill-card"><span class="skill-icon">🏗️</span><div class="skill-name">C++</div><div class="skill-level">ADVANCED · 80%</div><div class="bar-bg"><div class="bar-fill cyan" data-w="80"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">☕</span><div class="skill-name">Java</div><div class="skill-level">INTERMEDIATE · 70%</div><div class="bar-bg"><div class="bar-fill orange" data-w="70"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🐍</span><div class="skill-name">Python</div><div class="skill-level">INTERMEDIATE · 72%</div><div class="bar-bg"><div class="bar-fill green" data-w="72"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🗄️</span><div class="skill-name">SQL / Databases</div><div class="skill-level">INTERMEDIATE · 65%</div><div class="bar-bg"><div class="bar-fill purple" data-w="65"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🌿</span><div class="skill-name">Git & GitHub</div><div class="skill-level">GOOD · 78%</div><div class="bar-bg"><div class="bar-fill cyan" data-w="78"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">💻</span><div class="skill-name" data-i18n="skill_pc">PC Proficiency</div><div class="skill-level">ADVANCED · 90%</div><div class="bar-bg"><div class="bar-fill green" data-w="90"></div></div></div>
+    </div>
+    <div class="reveal">
+        <p style="font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);margin-bottom:16px" data-i18n="tools_label">TOOLS & ENVIRONMENT</p>
+        <div class="tools-wrap">
+            <div class="tool-pill"><span class="emo">🍎</span> MacBook Air M4</div>
+            <div class="tool-pill"><span class="emo">🐙</span> GitHub</div>
+            <div class="tool-pill"><span class="emo">🗄️</span> SQL Server</div>
+            <div class="tool-pill"><span class="emo">🌿</span> Git</div>
+            <div class="tool-pill"><span class="emo">🏗️</span> C++</div>
+            <div class="tool-pill"><span class="emo">☕</span> Java</div>
+            <div class="tool-pill"><span class="emo">🐍</span> Python</div>
+            <div class="tool-pill"><span class="emo">💻</span> VS Code</div>
+            <div class="tool-pill"><span class="emo">📦</span> IntelliJ IDEA</div>
+        </div>
     </div>
 </section>
-<!-- ЖОБАЛАР -->
+
 <section id="projects">
-    <h2>Жобалар</h2>
-    <div class="projects-grid">
-
-        <div class="project-card">
-            <h3>Портфолио сайт</h3>
-            <p>Жеке портфолио сайт — HTML, CSS</p>
-            <a href="https://portfolio-eight-ashy-538vqpia0p.vercel.app/" class="btn" target="_blank">Көру</a>
+    <div class="section-tag"><span data-i18n="proj_tag">03 · PROJECTS</span></div>
+    <h2 class="section-h reveal" data-i18n="proj_h">My <span class="acc">work</span></h2>
+    <div class="projects-grid reveal">
+        <div class="proj-card">
+            <div class="proj-num">01</div>
+            <h3 data-i18n="p1_title">Portfolio Website</h3>
+            <p data-i18n="p1_desc">Personal portfolio — modern design, animations, responsive layout, multilingual support. Built entirely from scratch.</p>
+            <div class="proj-tags"><span class="proj-tag">HTML</span><span class="proj-tag">CSS</span><span class="proj-tag">JS</span></div>
+            <a href="https://portfolio-eight-ashy-538vqpia0p.vercel.app/" class="proj-link" target="_blank" rel="noopener" data-i18n="view">View →</a>
         </div>
-
-        <div class="project-card">
-            <h3>Жоба 2</h3>
-            <p>Жақында қосылады...</p>
-            <a href="#" class="btn">Жақында</a>
+        <div class="proj-card dim">
+            <div class="proj-num">02</div>
+            <h3 data-i18n="p2_title">Project 02</h3>
+            <p data-i18n="coming_soon">Coming soon...</p>
+            <div class="proj-tags"><span class="proj-tag" data-i18n="soon">Soon</span></div>
+            <span class="proj-link" data-i18n="stay_tuned">Stay tuned →</span>
         </div>
-
-        <div class="project-card">
-            <h3>Жоба 3</h3>
-            <p>Жақында қосылады...</p>
-            <a href="#" class="btn">Жақында</a>
+        <div class="proj-card dim">
+            <div class="proj-num">03</div>
+            <h3 data-i18n="p3_title">Project 03</h3>
+            <p data-i18n="coming_soon">Coming soon...</p>
+            <div class="proj-tags"><span class="proj-tag" data-i18n="soon">Soon</span></div>
+            <span class="proj-link" data-i18n="stay_tuned">Stay tuned →</span>
         </div>
-
     </div>
 </section>
-<!-- БАЙЛАНЫС -->
+
 <section id="contact">
-    <h2>Байланыс</h2>
-    <div class="contact-content">
-        <p>Жоба бар ма? Хабарласыңыз!</p>
-        <div class="contact-links">
-            <a href="mailto:ersik0358@gmail.com" class="btn">📧 Email</a>
-            <a href="https://t.me/exp075" class="btn">✈️ Telegram</a>
+    <div class="section-tag" style="justify-content:center"><span data-i18n="contact_tag">04 · CONTACT</span></div>
+    <div class="contact-inner">
+        <h2 class="section-h reveal" data-i18n="contact_h">Got a project?<br><span class="acc">Let's talk.</span></h2>
+        <p class="reveal" data-i18n="contact_sub">I'm always open to new opportunities, collaborations, and interesting projects. Don't hesitate to reach out!</p>
+        <div class="contact-grid reveal">
+            <a href="mailto:ersik0358@gmail.com" class="contact-card">
+                <span class="contact-icon">📧</span>
+                <div class="contact-info"><span data-i18n="email_label">EMAIL</span><strong>ersik0358@gmail.com</strong></div>
+            </a>
+            <a href="https://t.me/exp075" target="_blank" class="contact-card">
+                <span class="contact-icon">✈️</span>
+                <div class="contact-info"><span>TELEGRAM</span><strong>@exp075</strong></div>
+            </a>
+            <a href="https://www.instagram.com/yeaska.exp/" target="_blank" class="contact-card">
+                <span class="contact-icon">📸</span>
+                <div class="contact-info"><span>INSTAGRAM</span><strong>@yeaska.exp</strong></div>
+            </a>
+            <a href="https://www.linkedin.com/in/yeraska-exp-4b735a387/" target="_blank" class="contact-card">
+                <span class="contact-icon">💼</span>
+                <div class="contact-info"><span>LINKEDIN</span><strong>Yeraska Exp</strong></div>
+            </a>
         </div>
+        <a href="mailto:ersik0358@gmail.com" class="btn btn-accent reveal" style="font-size:16px;padding:16px 48px" data-i18n="contact_btn">Send a Message →</a>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Ерасыл. Барлық құқықтар қорғалған.</p>
+    <span class="footer-logo">ItYerasyl0.dev</span>
+    <p data-i18n="footer_copy">© 2026 · All rights reserved</p>
+    <p>📍 <span data-i18n="footer_loc">Taraz, Kazakhstan</span></p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

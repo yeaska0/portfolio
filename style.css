@@ -46,7 +46,7 @@ ul{list-style:none}
 .agbtn:hover{border-color:var(--a1);color:var(--a1)}
 
 /* TOPBAR */
-#topbar{position:fixed;top:14px;right:14px;z-index:600;display:flex;align-items:center;gap:8px}
+#topbar{position:fixed;top:14px;right:80px;z-index:600;display:flex;align-items:center;gap:8px}
 .lpills{display:flex;gap:3px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:4px;backdrop-filter:blur(10px)}
 .lpill{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:1px;padding:5px 9px;border-radius:6px;color:var(--muted);text-transform:uppercase;transition:all .2s}
 .lpill.on{background:var(--a1);color:#fff}
@@ -126,7 +126,7 @@ nav.stuck{background:rgba(4,6,10,.92);backdrop-filter:blur(20px);border-color:va
 .btno:hover{background:color-mix(in srgb,var(--a1) 8%,transparent);transform:translateY(-2px)}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:72px;align-items:start}
+.about-grid{grid-template-columns:200px 1.15fr 1fr;gap:72px;align-items:start}
 .about-text p{font-size:15px;color:var(--text2);line-height:1.95;margin-bottom:16px}
 .about-text strong{color:var(--text)}
 .about-text .hi{color:var(--a1)}

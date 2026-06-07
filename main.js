@@ -281,3 +281,19 @@ if (hn) {
         setTimeout(() => hn.style.transform = 'none', 80);
     }, 5500);
 }
+/* LOADER */
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.classList.add('hide');
+            setTimeout(() => loader.style.display = 'none', 700);
+        }
+    }, 1800);
+});
+
+/* BACK TO TOP */
+const totop = document.getElementById('totop');
+window.addEventListener('scroll', () => {
+    if (totop) totop.classList.toggle('show', scrollY > 400);
+}, { passive: true });

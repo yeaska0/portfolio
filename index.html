@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItYerasyl0.dev — Backend Developer</title>
+    <meta name="description" content="Yerasyl — Backend Developer from Taraz, Kazakhstan. C++, Java, Python, SQL.">
+    <meta property="og:title" content="ItYerasyl0.dev — Backend Developer">
+    <meta property="og:description" content="Backend Developer from Taraz, Kazakhstan">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -15,6 +18,12 @@
 <body>
 
 <div id="cdot"></div>
+<div id="loader">
+    <div class="loader-inner">
+        <div class="loader-logo">ItYerasyl0.dev</div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+</div>
 <div id="cring"></div>
 
 <div id="auth">
@@ -114,7 +123,10 @@
 
 <section id="about" class="sec sec-alt">
     <div class="eyebrow">01 · <span data-t="na">About</span></div>
-    <div class="about-grid">
+    <div class="about-grid" style="grid-template-columns: 200px 1.15fr 1fr;">
+        <div class="about-photo rvr">
+            <img src="photo.jpg" alt="Yerasyl">
+        </div>
         <div class="rvl">
             <div class="sectitle" data-t="ah">Building systems<br>that scale.</div>
             <p data-t="ap1">I'm <strong>Yerasyl</strong> — a backend-focused developer and student at <strong>Taraz M.Kh. Dulati University</strong>, Department of <span class="hi">Information Systems & Technology</span>.</p>
@@ -221,7 +233,7 @@
     <p>© 2026 · ItYerasyl0 · Taraz, Kazakhstan</p>
     <div class="fstat"><div class="fdot"></div><span data-t="fa">Available for work</span></div>
 </footer>
-
+<button id="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script src="main.js"></script>
 </body>
 </html>

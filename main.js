@@ -29,6 +29,7 @@ const TR = {
         fa:'Available for work',
         ee:'Enter a valid email',ep:'Min 6 chars',en:'Enter your name',
         ex:'Email already registered',enf:'User not found',ew:'Wrong password',
+        skf:'Frameworks', skd:'Databases', hcv:'Download CV',
     },
     ru:{
         as:'Бэкенд Разработчик',tli:'Войти',trg:'Регистрация',
@@ -57,6 +58,7 @@ const TR = {
         fa:'Открыт к работе',
         ee:'Введите корректный email',ep:'Минимум 6 символов',en:'Введите имя',
         ex:'Email уже зарегистрирован',enf:'Пользователь не найден',ew:'Неверный пароль',
+        skf:'Фреймворки', skd:'Базы данных', hcv:'Скачать резюме',
     },
     kz:{
         as:'Backend Әзірлеуші',tli:'Кіру',trg:'Тіркелу',
@@ -85,7 +87,8 @@ const TR = {
         fa:'Жұмысқа дайын',
         ee:'Дұрыс email енгізіңіз',ep:'Ең кемі 6 таңба',en:'Атыңызды енгізіңіз',
         ex:'Email тіркелген',enf:'Пайдаланушы табылмады',ew:'Қате құпия сөз',
-    }};
+        skf:'Фреймворктер', skd:'Дерекқорлар', hcv:'CV жүктеу',
+    }};en
 
 /* =============================================
    LANGUAGE

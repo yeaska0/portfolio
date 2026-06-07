@@ -173,7 +173,15 @@ nav.stuck{background:rgba(4,6,10,.92);backdrop-filter:blur(20px);border-color:va
 .ttile:hover .tnm{color:var(--a1)}
 .tico{font-size:26px;margin-bottom:7px}
 .tnm{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;transition:color .2s}
-
+/* STACK GRID */
+.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-bottom:48px}
+.stack-group{}
+.stack-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.stk-tag{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.5px;padding:7px 14px;border:1px solid var(--border2);border-radius:8px;color:var(--text2);background:var(--card);transition:all .2s}
+.stk-tag:hover{border-color:var(--a1);color:var(--a1);transform:translateY(-2px)}
+.stk-tag.stk-hot{border-color:color-mix(in srgb,var(--a1) 40%,transparent);color:var(--a1);background:color-mix(in srgb,var(--a1) 6%,transparent)}
+@media(max-width:900px){.stack-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.stack-grid{grid-template-columns:1fr}}
 /* PROJECTS */
 .projgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
 .pcard{background:var(--bg);padding:34px 26px;display:flex;flex-direction:column;transition:background .25s;position:relative;overflow:hidden}

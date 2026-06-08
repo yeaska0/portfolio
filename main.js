@@ -36,6 +36,11 @@ const TR = {
         ee:'Enter a valid email',ep:'Min 6 chars',en:'Enter your name',
         ex:'Email already registered',enf:'User not found',ew:'Wrong password',
         skf:'Frameworks',skd:'Databases',hcv:'Download CV',
+        skdb:'Databases', sktl:'Tools', skide:'IDEs', su2:'Tools',
+        pv:'View', ps:'Soon',
+        ned:'Education', edh:'Education', edn1:'M.Kh. Dulati Taraz University',
+        edd1:'Information Systems & Technology', edst:'Current · GPA 3.5',
+        certh:'Certificates',
     },
     ru:{
         as:'Бэкенд Разработчик',tli:'Войти',trg:'Регистрация',
@@ -74,6 +79,11 @@ const TR = {
         ee:'Введите корректный email',ep:'Минимум 6 символов',en:'Введите имя',
         ex:'Email уже зарегистрирован',enf:'Пользователь не найден',ew:'Неверный пароль',
         skf:'Фреймворки',skd:'Базы данных',hcv:'Скачать резюме',
+        skdb:'Базы данных', sktl:'Инструменты', skide:'IDE', su2:'Инструменты',
+        pv:'Смотреть', ps:'Скоро',
+        ned:'Образование', edh:'Образование', edn1:'ТарМУ им. М.Х. Дулати',
+        edd1:'Информационные системы и технологии', edst:'Сейчас · GPA 3.5',
+        certh:'Сертификаты',
     },
     kz:{
         as:'Backend Әзірлеуші',tli:'Кіру',trg:'Тіркелу',
@@ -112,6 +122,11 @@ const TR = {
         ee:'Дұрыс email енгізіңіз',ep:'Ең кемі 6 таңба',en:'Атыңызды енгізіңіз',
         ex:'Email тіркелген',enf:'Пайдаланушы табылмады',ew:'Қате құпия сөз',
         skf:'Фреймворктер',skd:'Дерекқорлар',hcv:'CV жүктеу',
+        skdb:'Дерекқорлар', sktl:'Құралдар', skide:'IDE', su2:'Құралдар',
+        pv:'Қарау', ps:'Жақында',
+        ned:'Білім', edh:'Білім', edn1:'М.Х. Дулати атындағы ТарМУ',
+        edd1:'Ақпараттық жүйелер және технологиялар', edst:'Қазір · GPA 3.5',
+        certh:'Сертификаттар',
     }
 };
 

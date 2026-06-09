@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItYerasyl0.dev — Backend Developer</title>
     <meta name="description" content="Yerasyl — Backend-focused Software Engineering Student from Taraz, Kazakhstan.">
-    <meta property="og:title" content="ItYerasyl0.dev — Backend Developer">
+    <meta property="og:title"       content="ItYerasyl0.dev — Backend Developer">
     <meta property="og:description" content="Backend Developer from Taraz, Kazakhstan">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,213 +13,384 @@
 </head>
 <body>
 
+<!-- Custom cursor -->
 <div id="cdot"></div>
+<div id="cring"></div>
+
+<!-- Loader -->
 <div id="loader">
     <div class="loader-inner">
         <div class="loader-logo">ItYerasyl0.dev</div>
         <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
 </div>
-<div id="cring"></div>
 
+<!-- ── AUTH ─────────────────────────────── -->
 <div id="auth">
     <div class="acard">
         <div class="alogo">
             <div class="alogo-text">ItYerasyl0.dev</div>
             <div class="alogo-sub" data-t="as">Backend Developer</div>
         </div>
+
         <div class="atabs">
             <button class="atab on" id="tli" onclick="stab('li')" data-t="tli">Sign In</button>
-            <button class="atab" id="trg" onclick="stab('rg')" data-t="trg">Sign Up</button>
+            <button class="atab"    id="trg" onclick="stab('rg')" data-t="trg">Sign Up</button>
         </div>
+
+        <!-- Sign In -->
         <div id="fli">
             <div class="aform">
                 <div class="aerr" id="eli"></div>
-                <div><label class="alabel" data-t="le">Email</label><input class="ainp" type="email" id="lie" placeholder="you@example.com"></div>
-                <div><label class="alabel" data-t="lp">Password</label><input class="ainp" type="password" id="lip" placeholder="••••••••"></div>
+                <div>
+                    <label class="alabel" data-t="le">Email</label>
+                    <input class="ainp" type="email" id="lie" placeholder="you@example.com">
+                </div>
+                <div>
+                    <label class="alabel" data-t="lp">Password</label>
+                    <input class="ainp" type="password" id="lip" placeholder="••••••••">
+                </div>
                 <button class="abtn" onclick="doLi()" data-t="bli">Sign In →</button>
                 <div class="adiv" data-t="or">or</div>
-                <button class="agbtn" onclick="guest()"><span>🚀</span><span data-t="bg">Continue as Guest</span></button>
+                <button class="agbtn" onclick="guest()">
+                    <span>🚀</span><span data-t="bg">Continue as Guest</span>
+                </button>
             </div>
         </div>
+
+        <!-- Sign Up -->
         <div id="frg" style="display:none">
             <div class="aform">
                 <div class="aerr" id="erg"></div>
-                <div><label class="alabel" data-t="ln">Name</label><input class="ainp" type="text" id="rna" placeholder="Your name"></div>
-                <div><label class="alabel" data-t="le">Email</label><input class="ainp" type="email" id="rem" placeholder="you@example.com"></div>
-                <div><label class="alabel" data-t="lp">Password</label><input class="ainp" type="password" id="rpa" placeholder="min 6 chars"></div>
+                <div>
+                    <label class="alabel" data-t="ln">Name</label>
+                    <input class="ainp" type="text" id="rna" placeholder="Your name">
+                </div>
+                <div>
+                    <label class="alabel" data-t="le">Email</label>
+                    <input class="ainp" type="email" id="rem" placeholder="you@example.com">
+                </div>
+                <div>
+                    <label class="alabel" data-t="lp">Password</label>
+                    <input class="ainp" type="password" id="rpa" placeholder="min 6 chars">
+                </div>
                 <button class="abtn" onclick="doRg()" data-t="brg">Create Account →</button>
                 <div class="adiv" data-t="or">or</div>
-                <button class="agbtn" onclick="guest()"><span>🚀</span><span data-t="bg">Continue as Guest</span></button>
+                <button class="agbtn" onclick="guest()">
+                    <span>🚀</span><span data-t="bg">Continue as Guest</span>
+                </button>
             </div>
         </div>
     </div>
 </div>
 
+<!-- ── TOPBAR ────────────────────────────── -->
 <div id="topbar">
     <div class="lpills">
-        <button class="lpill on" onclick="sl('en')">EN</button>
-        <button class="lpill" onclick="sl('ru')">RU</button>
-        <button class="lpill" onclick="sl('kz')">KZ</button>
+        <button class="lpill on" data-lang="en" onclick="sl('en')">EN</button>
+        <button class="lpill"    data-lang="ru" onclick="sl('ru')">RU</button>
+        <button class="lpill"    data-lang="kz" onclick="sl('kz')">KZ</button>
     </div>
     <button class="tbtn" id="thbtn" onclick="togTheme()">🌙</button>
 </div>
 
+<!-- ── NAV ──────────────────────────────── -->
 <nav id="nav">
     <div class="nlogo">ItYerasyl0.dev<em>_</em></div>
     <ul class="nlinks">
-        <li><a href="#about" data-t="na">About</a></li>
-        <li><a href="#skills" data-t="ns">Skills</a></li>
+        <li><a href="#about"     data-t="na">About</a></li>
         <li><a href="#education" data-t="ned">Education</a></li>
-        <li><a href="#projects" data-t="np">Projects</a></li>
-        <li><a href="#contact" data-t="nc">Contact</a></li>
+        <li><a href="#skills"    data-t="ns">Skills</a></li>
+        <li><a href="#projects"  data-t="np">Projects</a></li>
+        <li><a href="#contact"   data-t="nc">Contact</a></li>
     </ul>
-    <button class="nbg" id="nbg"><span></span><span></span><span></span></button>
+    <button class="nbg" id="nbg" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
 
+<!-- Mobile drawer -->
 <div class="novlay" id="nov" onclick="closeMob()"></div>
 <div class="ndrawer" id="ndr">
-    <a href="#about" class="nmlink" data-t="na">About</a>
-    <a href="#skills" class="nmlink" data-t="ns">Skills</a>
+    <a href="#about"     class="nmlink" data-t="na">About</a>
     <a href="#education" class="nmlink" data-t="ned">Education</a>
-    <a href="#projects" class="nmlink" data-t="np">Projects</a>
-    <a href="#contact" class="nmlink" data-t="nc">Contact</a>
+    <a href="#skills"    class="nmlink" data-t="ns">Skills</a>
+    <a href="#projects"  class="nmlink" data-t="np">Projects</a>
+    <a href="#contact"   class="nmlink" data-t="nc">Contact</a>
 </div>
 
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
 <section id="hero">
     <div class="hbg"></div>
     <div class="hgrid"></div>
+
+    <!-- Floating orbs -->
     <div class="orb" style="width:420px;height:420px;background:color-mix(in srgb,var(--a1) 6%,transparent);top:-80px;right:-80px;--d:10s;--dl:0s"></div>
     <div class="orb" style="width:340px;height:340px;background:color-mix(in srgb,var(--a2) 6%,transparent);bottom:-60px;left:-60px;--d:12s;--dl:-4s"></div>
-    <div class="orb" style="width:200px;height:200px;background:color-mix(in srgb,var(--a3) 4%,transparent);top:45%;right:22%;--d:8s;--dl:-2s"></div>
-    <div class="hinner">
-        <div class="hbadge"><span class="bdot"></span><span data-t="hb">Backend Developer · Taraz, Kazakhstan</span></div>
-        <div class="hname">
-            <span class="hn1" data-t="hn1">Yerasyl</span>
-            <span class="hn2">Backend Dev</span>
+    <div class="orb" style="width:200px;height:200px;background:color-mix(in srgb,var(--a3) 4%,transparent);top:45%;right:28%;--d:8s;--dl:-2s"></div>
+
+    <div class="hcontent">
+        <!-- Left: text -->
+        <div class="hinner">
+            <div class="hbadge">
+                <span class="bdot"></span>
+                <span data-t="hb">Backend Developer · Taraz, Kazakhstan</span>
+            </div>
+
+            <div class="hname">
+                <span class="hn1" data-t="hn1">Yerasyl</span>
+                <span class="hn2">Backend Dev</span>
+            </div>
+
+            <div class="hrole">
+                <span data-t="hr">Backend Engineer</span>
+                &nbsp;/&nbsp;
+                <span class="hl">ItYerasyl0</span>
+            </div>
+
+            <p class="hdesc" data-t="hd">
+                Backend-focused Software Engineering Student from Kazakhstan.
+                Building Java, Python and SQL projects. Passionate about scalable systems,
+                API development and databases.
+            </p>
+
+            <div class="hbtns">
+                <a href="#projects" class="btn btnp"><span data-t="hb1">View My Work</span> →</a>
+                <a href="#contact"  class="btn btno"><span data-t="hb2">Get in Touch</span></a>
+            </div>
+
+            <div class="hsocials">
+                <a href="https://www.instagram.com/yeaska.exp/" target="_blank" rel="noopener" class="schip">📸 Instagram</a>
+                <a href="https://t.me/exp075"                   target="_blank" rel="noopener" class="schip">✈️ Telegram</a>
+                <a href="https://github.com/yeaska0"            target="_blank" rel="noopener" class="schip">🐙 GitHub</a>
+                <a href="mailto:ersik0358@gmail.com"            class="schip">📧 Email</a>
+            </div>
+
+            <div class="hchips">
+                <span class="chip">Java</span>
+                <span class="chip">Python</span>
+                <span class="chip">C++</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Git</span>
+                <span class="chip">MacBook M4</span>
+            </div>
         </div>
-        <div class="hrole"><span data-t="hr">Backend Engineer</span> &nbsp;/&nbsp; <span class="hl">ItYerasyl0</span></div>
-        <p class="hdesc" data-t="hd">Backend-focused Software Engineering Student. I know Java, Python, C++ and SQL. Studying at Taraz University since 2024. Actively seeking internship opportunities.</p>
-        <div class="hbtns">
-            <a href="#projects" class="btn btnp"><span data-t="hb1">View My Work</span> →</a>
-            <a href="#contact" class="btn btno"><span data-t="hb2">Get in Touch</span></a>
-        </div>
-        <div class="hsocials">
-            <a href="https://www.instagram.com/yeaska.exp/" target="_blank" class="schip">📸 Instagram</a>
-            <a href="https://t.me/exp075" target="_blank" class="schip">✈️ Telegram</a>
-            <a href="https://github.com/yeaska0" target="_blank" class="schip">🐙 GitHub</a>
-            <a href="mailto:ersik0358@gmail.com" class="schip">📧 Email</a>
-        </div>
-        <div class="hchips">
-            <span class="chip">Java</span>
-            <span class="chip">Python</span>
-            <span class="chip">C++</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Git</span>
-            <span class="chip">MacBook M4</span>
+
+        <!-- Right: Terminal card (hidden on mobile) -->
+        <div class="hterm">
+            <div class="terminal-card">
+                <div class="term-bar">
+                    <span class="term-dot" style="background:#ff5f57"></span>
+                    <span class="term-dot" style="background:#ffbd2e"></span>
+                    <span class="term-dot" style="background:#28c840"></span>
+                    <span class="term-title">yerasyl@MacBook-Air-M4 ~</span>
+                </div>
+                <div class="term-body">
+                    <div class="term-line"><span class="term-prompt">$ </span>whoami</div>
+                    <div class="term-line term-out">Yerasyl</div>
+                    <div class="term-line">&nbsp;</div>
+                    <div class="term-line"><span class="term-prompt">$ </span>cat role.txt</div>
+                    <div class="term-line term-cyan">Backend Developer · Student</div>
+                    <div class="term-line">&nbsp;</div>
+                    <div class="term-line"><span class="term-prompt">$ </span>skills --list</div>
+                    <div class="term-line term-out">Java · Python · C++ · SQL</div>
+                    <div class="term-line term-purple">IntelliJ · Git · MySQL · macOS</div>
+                    <div class="term-line">&nbsp;</div>
+                    <div class="term-line"><span class="term-prompt">$ </span>echo $LOCATION</div>
+                    <div class="term-line term-out">Taraz, Kazakhstan 🇰🇿</div>
+                    <div class="term-line">&nbsp;</div>
+                    <div class="term-line"><span class="term-prompt">$ </span>echo $STATUS</div>
+                    <div class="term-line term-green">Open to Internship ●</div>
+                    <div class="term-line">&nbsp;</div>
+                    <div class="term-line"><span class="term-prompt">$ </span><span class="term-cursor">_</span></div>
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="scue">
         <div class="smouse"><div class="swheel"></div></div>
         <span data-t="sc">Scroll to explore</span>
     </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     ABOUT  §01
+══════════════════════════════════════ -->
 <section id="about" class="sec sec-alt">
     <div class="eyebrow">01 · <span data-t="na">About</span></div>
+
     <div class="about-grid">
+        <!-- Left -->
         <div class="rvl">
             <div class="sectitle" data-t="ah">Building systems<br>that scale.</div>
-            <p data-t="ap1">I'm <strong>Yerasyl</strong> — a Backend-focused Software Engineering Student at <strong>Taraz M.Kh. Dulati University</strong> (since 2024), Department of <span class="hi">Information Systems & Technology</span>.</p>
-            <p data-t="ap2">I know <strong>4 programming languages</strong>: Java (main), Python, C++ and SQL. Currently deepening my backend skills through real projects.</p>
-            <p data-t="ap3">My English level is <strong>Pre-Intermediate</strong> and I'm actively improving it. Seeking internship to get real-world software development experience.</p>
+
+            <p data-t="ap1">I'm <strong>Yerasyl</strong> — a backend-focused developer and student at
+                <strong>Taraz M.Kh. Dulati University</strong> (since 2024), Department of
+                <span class="hi">Information Systems &amp; Technology</span>.</p>
+
+            <p data-t="ap2">I know <strong>4 programming languages</strong>: Java (main), Python, C++ and SQL.
+                Working on a <strong>MacBook Air M4</strong> — fast builds, clean workflow. Git in every project.</p>
+
+            <p data-t="ap3">Actively seeking <strong>internship opportunities</strong>. My goal: become a
+                <strong>world-class backend engineer</strong> who ships fast, reliable, elegant systems.</p>
+
             <div class="infogrid">
-                <div class="icell"><div class="ilbl" data-t="iu">University</div><div class="ival">M.Kh. Dulati, Taraz</div></div>
-                <div class="icell"><div class="ilbl" data-t="id">Department</div><div class="ival" data-t="idv">IS & Technology</div></div>
-                <div class="icell"><div class="ilbl" data-t="ic">Since</div><div class="ival">2024</div></div>
-                <div class="icell"><div class="ilbl" data-t="ist">Status</div><div class="ival green" data-t="isv">Open to Internship</div></div>
+                <div class="icell">
+                    <div class="ilbl" data-t="iu">University</div>
+                    <div class="ival">M.Kh. Dulati, Taraz</div>
+                </div>
+                <div class="icell">
+                    <div class="ilbl" data-t="id">Department</div>
+                    <div class="ival" data-t="idv">IS &amp; Technology</div>
+                </div>
+                <div class="icell">
+                    <div class="ilbl" data-t="ic">Campus</div>
+                    <div class="ival" data-t="icv">Tech Building</div>
+                </div>
+                <div class="icell">
+                    <div class="ilbl" data-t="ist">Status</div>
+                    <div class="ival green" data-t="isv">Open to Internship</div>
+                </div>
             </div>
         </div>
-        <div class="rvr" style="display:flex;flex-direction:column;gap:18px">
+
+        <!-- Right -->
+        <div class="rvr" style="display:flex;flex-direction:column;gap:20px">
             <div class="statgrid">
-                <div class="sbox"><span class="sn" data-tg="4">0</span><span class="sl" data-t="sl2">Languages</span></div>
-                <div class="sbox"><span class="sn" data-tg="7">0</span><span class="sl" data-t="su2">Tools</span></div>
-                <div class="sbox"><span class="sn">2024</span><span class="sl" data-t="se">Since</span></div>
-                <div class="sbox"><span class="sn">∞</span><span class="sl" data-t="sd">Drive</span></div>
+                <div class="sbox">
+                    <span class="sn" data-tg="4">0</span>
+                    <span class="sl" data-t="sl2">Languages</span>
+                </div>
+                <div class="sbox">
+                    <span class="sn" data-tg="7">0</span>
+                    <span class="sl" data-t="su2">Tools</span>
+                </div>
+                <div class="sbox">
+                    <span class="sn">2024</span>
+                    <span class="sl" data-t="se">Since</span>
+                </div>
+                <div class="sbox">
+                    <span class="sn">∞</span>
+                    <span class="sl" data-t="sd">Drive</span>
+                </div>
             </div>
+
             <div class="setupcard">
                 <div class="ctitle" data-t="su">My Setup</div>
-                <div class="srow"><span class="sico">💻</span><div><div class="snm">MacBook Air M4</div><div class="sdsc">Apple Silicon · Fast builds</div></div><span class="stag">Primary</span></div>
-                <div class="srow"><span class="sico">☕</span><div><div class="snm">IntelliJ IDEA</div><div class="sdsc">Java IDE · Daily</div></div><span class="stag">Java</span></div>
-                <div class="srow"><span class="sico">🐍</span><div><div class="snm">PyCharm</div><div class="sdsc">Python IDE</div></div><span class="stag">Python</span></div>
-                <div class="srow"><span class="sico">🌐</span><div><div class="snm">WebStorm</div><div class="sdsc">Web IDE</div></div><span class="stag">Web</span></div>
-                <div class="srow"><span class="sico">💻</span><div><div class="snm">VS Code</div><div class="sdsc">Lightweight editor</div></div><span class="stag">Editor</span></div>
-                <div class="srow"><span class="sico">🐙</span><div><div class="snm">Git Desktop</div><div class="sdsc">Version control · GUI</div></div><span class="stag">Git</span></div>
-                <div class="srow"><span class="sico">🖥️</span><div><div class="snm">iTerm2</div><div class="sdsc">Terminal</div></div><span class="stag">CLI</span></div>
-                <div class="srow"><span class="sico">🗄️</span><div><div class="snm">MAMP</div><div class="sdsc">Local server · MySQL</div></div><span class="stag">DB</span></div>
+                <div class="srow">
+                    <span class="sico">💻</span>
+                    <div><div class="snm">MacBook Air M4</div><div class="sdsc">Apple Silicon · Fast builds</div></div>
+                    <span class="stag">Primary</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">☕</span>
+                    <div><div class="snm">IntelliJ IDEA</div><div class="sdsc">Java IDE · Daily driver</div></div>
+                    <span class="stag">Java</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">🐍</span>
+                    <div><div class="snm">PyCharm</div><div class="sdsc">Python IDE</div></div>
+                    <span class="stag">Python</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">🌐</span>
+                    <div><div class="snm">WebStorm</div><div class="sdsc">Web IDE</div></div>
+                    <span class="stag">Web</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">📝</span>
+                    <div><div class="snm">VS Code</div><div class="sdsc">Lightweight editor</div></div>
+                    <span class="stag">Editor</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">🐙</span>
+                    <div><div class="snm">Git Desktop</div><div class="sdsc">Version control · GUI</div></div>
+                    <span class="stag">Git</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">🖥️</span>
+                    <div><div class="snm">iTerm2</div><div class="sdsc">Terminal</div></div>
+                    <span class="stag">CLI</span>
+                </div>
+                <div class="srow">
+                    <span class="sico">🗄️</span>
+                    <div><div class="snm">MAMP</div><div class="sdsc">Local server · MySQL</div></div>
+                    <span class="stag">DB</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     EDUCATION  §02
+══════════════════════════════════════ -->
 <section id="education" class="sec sec-alt">
-        <div class="eyebrow">02 · <span data-t="ned">Education & Certificates</span></div>
-        <div class="sectitle rv" data-t="edh">Education</div>
-        <div class="edu-layout rv">
+    <div class="eyebrow">02 · <span data-t="ned">Education</span></div>
+    <div class="sectitle rv" data-t="edh">Education</div>
 
-            <!-- University -->
-            <div class="edu-card">
-                <div class="edu-card-left">
-                    <div class="edu-icon">🎓</div>
-                </div>
-                <div class="edu-card-body">
-                    <div class="edu-year">2024 – 2028</div>
-                    <div class="edu-name" data-t="edn1">M.Kh. Dulati Taraz University</div>
-                    <div class="edu-dept" data-t="edd1">Information Systems & Technology</div>
-                    <div class="edu-meta-row">
-                        <span class="edu-badge">📍 Taraz, Kazakhstan</span>
-                        <span class="edu-badge edu-badge-green" data-t="edst">Current · GPA 3.5</span>
-                    </div>
-                </div>
+    <div class="edu-layout rv">
+
+        <!-- University -->
+        <div class="edu-card">
+            <div class="edu-card-left">
+                <div class="edu-icon">🎓</div>
             </div>
-
-            <!-- Certifications -->
-            <div class="cert-title" data-t="certh">Certificates</div>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-logo">🌐</div>
-                    <div class="cert-info">
-                        <div class="cert-name">Networking Basics</div>
-                        <div class="cert-org">Cisco Networking Academy</div>
-                        <div class="cert-date">Dec 2025</div>
-                    </div>
-                    <div class="cert-badge">Verified</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-logo">🖥️</div>
-                    <div class="cert-info">
-                        <div class="cert-name">Operating Systems Basics</div>
-                        <div class="cert-org">Cisco Networking Academy</div>
-                        <div class="cert-date">Feb 2025</div>
-                    </div>
-                    <div class="cert-badge">Verified</div>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-logo">🇬🇧</div>
-                    <div class="cert-info">
-                        <div class="cert-name">English A2 · Pre-Intermediate</div>
-                        <div class="cert-org">Onebilim Academy</div>
-                        <div class="cert-date">May 2026</div>
-                    </div>
-                    <div class="cert-badge">Verified</div>
+            <div class="edu-card-body">
+                <div class="edu-year">2024 – 2028</div>
+                <div class="edu-name" data-t="edn1">M.Kh. Dulati Taraz University</div>
+                <div class="edu-dept" data-t="edd1">Information Systems &amp; Technology</div>
+                <div class="edu-meta-row">
+                    <span class="edu-badge">📍 Taraz, Kazakhstan</span>
+                    <span class="edu-badge edu-badge-green" data-t="edst">Current · GPA 3.5</span>
                 </div>
             </div>
         </div>
+
+        <!-- Certificates -->
+        <div class="cert-title" data-t="certh">Certificates</div>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-logo">🌐</div>
+                <div class="cert-info">
+                    <div class="cert-name">Networking Basics</div>
+                    <div class="cert-org">Cisco Networking Academy</div>
+                    <div class="cert-date">Dec 2025</div>
+                </div>
+                <div class="cert-badge">Verified</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-logo">🖥️</div>
+                <div class="cert-info">
+                    <div class="cert-name">Operating Systems Basics</div>
+                    <div class="cert-org">Cisco Networking Academy</div>
+                    <div class="cert-date">Feb 2025</div>
+                </div>
+                <div class="cert-badge">Verified</div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-logo">🇬🇧</div>
+                <div class="cert-info">
+                    <div class="cert-name">English A2 · Pre-Intermediate</div>
+                    <div class="cert-org">Onebilim Academy</div>
+                    <div class="cert-date">May 2026</div>
+                </div>
+                <div class="cert-badge">Verified</div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     SKILLS  §03
+══════════════════════════════════════ -->
 <section id="skills" class="sec">
     <div class="eyebrow">03 · <span data-t="ns">Skills</span></div>
     <div class="sectitle rv" data-t="skh">Tech Stack</div>
+
     <div class="stack-grid rv">
         <div class="stack-group">
             <div class="sgtitle" data-t="skl">Languages</div>
@@ -257,6 +428,7 @@
             </div>
         </div>
     </div>
+
     <div class="toolsgrid rv">
         <div class="ttile"><div class="tico">☕</div><div class="tnm">Java</div></div>
         <div class="ttile"><div class="tico">🐍</div><div class="tnm">Python</div></div>
@@ -270,53 +442,133 @@
     </div>
 </section>
 
+<!-- ══════════════════════════════════════
+     PROJECTS  §04
+══════════════════════════════════════ -->
 <section id="projects" class="sec sec-alt">
     <div class="eyebrow">04 · <span data-t="np">Projects</span></div>
-    <div class="sectitle rv" data-t="ph">My Work</div>
+    <div class="sectitle rv" data-t="ph">Featured Projects</div>
+
     <div class="projgrid rv">
+
+        <!-- 01 · Portfolio -->
         <div class="pcard">
             <div class="pnum">01</div>
+            <span class="pstatus live" data-t="ps_live">Live</span>
             <h3 data-t="p1t">Portfolio Site</h3>
-            <p data-t="p1d">Personal developer portfolio — responsive, multi-language, dark/light mode, animations. Built from scratch without frameworks.</p>
-            <div class="ptags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
-            <a href="https://portfolio-eight-ashy-538vqpia0p.vercel.app/" class="plink" target="_blank" data-t="pv">View →</a>
+            <p data-t="p1d">Personal developer portfolio — responsive, multi-language (EN/RU/KZ), dark/light mode, auth system, animations. Built from scratch.</p>
+            <div class="ptags">
+                <span class="ptag">HTML</span>
+                <span class="ptag">CSS</span>
+                <span class="ptag">JS</span>
+            </div>
+            <div class="plinks">
+                <a href="https://portfolio-eight-ashy-538vqpia0p.vercel.app/" class="plink" target="_blank" rel="noopener">
+                    <span data-t="pv">View</span> →
+                </a>
+            </div>
         </div>
+
+        <!-- 02 · Student Management -->
         <div class="pcard dim">
             <div class="pnum">02</div>
-            <h3 data-t="p2t">Project 02</h3>
-            <p data-t="p2d">Coming soon...</p>
-            <div class="ptags"><span class="ptag" data-t="ps">Soon</span></div>
-            <span class="plink" data-t="pc">Coming soon →</span>
+            <span class="pstatus wip" data-t="ps_wip">In Progress</span>
+            <h3 data-t="p2t">Student Management System</h3>
+            <p data-t="p2d">CRUD system for managing students, grades and courses. REST API with JWT authentication. Spring Boot + PostgreSQL.</p>
+            <div class="ptags">
+                <span class="ptag">Java</span>
+                <span class="ptag">Spring Boot</span>
+                <span class="ptag">PostgreSQL</span>
+                <span class="ptag">JWT</span>
+            </div>
+            <div class="plinks">
+                <span class="plink muted" data-t="pc">Demo soon →</span>
+            </div>
         </div>
+
+        <!-- 03 · Telegram Bot -->
         <div class="pcard dim">
             <div class="pnum">03</div>
-            <h3 data-t="p3t">Project 03</h3>
-            <p data-t="p3d">Coming soon...</p>
-            <div class="ptags"><span class="ptag" data-t="ps">Soon</span></div>
-            <span class="plink" data-t="pc">Coming soon →</span>
+            <span class="pstatus planned" data-t="ps_plan">Planned</span>
+            <h3 data-t="p3t">Telegram Finance Bot</h3>
+            <p data-t="p3d">Personal finance tracker via Telegram. Track income, expenses and savings. Python + PostgreSQL + Telegram API.</p>
+            <div class="ptags">
+                <span class="ptag">Python</span>
+                <span class="ptag">PostgreSQL</span>
+                <span class="ptag">Telegram API</span>
+            </div>
+            <div class="plinks">
+                <span class="plink muted" data-t="pc">Demo soon →</span>
+            </div>
         </div>
+
+        <!-- 04 · IELTS Tracker -->
+        <div class="pcard dim">
+            <div class="pnum">04</div>
+            <span class="pstatus planned" data-t="ps_plan">Planned</span>
+            <h3 data-t="p4t">IELTS Tracker API</h3>
+            <p data-t="p4d">REST API for IELTS preparation tracking. Vocabulary, progress charts, study sessions. Java + Spring Boot + PostgreSQL + JWT.</p>
+            <div class="ptags">
+                <span class="ptag">Java</span>
+                <span class="ptag">Spring Boot</span>
+                <span class="ptag">PostgreSQL</span>
+                <span class="ptag">JWT</span>
+            </div>
+            <div class="plinks">
+                <span class="plink muted" data-t="pc">Demo soon →</span>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<section id="contact" class="sec">
+<!-- ══════════════════════════════════════
+     CONTACT  §05
+══════════════════════════════════════ -->
+<section id="contact" class="sec sec-alt">
     <div class="eyebrow" style="justify-content:center">05 · <span data-t="nc">Contact</span></div>
-    <div class="ctbig rv"><span data-t="ch1">Let's</span><span class="stroke"> build</span><br><span data-t="ch2">together</span></div>
-    <p class="ctsub rv" data-t="cs">Open to collaborations, internships, and interesting backend projects.</p>
-    <div class="socrow rv">
-        <a href="https://www.instagram.com/yeaska.exp/" class="socard" target="_blank"><span class="soico">📸</span><div><div class="sonm">Instagram</div><div class="sohdl">@yeaska.exp</div></div></a>
-        <a href="https://www.linkedin.com/in/yeraska-exp-4b735a387/" class="socard" target="_blank"><span class="soico">💼</span><div><div class="sonm">LinkedIn</div><div class="sohdl">Yeraska Exp</div></div></a>
-        <a href="https://t.me/exp075" class="socard" target="_blank"><span class="soico">✈️</span><div><div class="sonm">Telegram</div><div class="sohdl">@exp075</div></div></a>
-        <a href="https://github.com/yeaska0" class="socard" target="_blank"><span class="soico">🐙</span><div><div class="sonm">GitHub</div><div class="sohdl">yeaska0</div></div></a>
+
+    <div class="ctbig rv">
+        <span data-t="ch1">Let's</span><span class="stroke"> build</span><br>
+        <span data-t="ch2">together</span>
     </div>
-    <div class="rv"><a href="mailto:ersik0358@gmail.com" class="elink">📧 &nbsp;ersik0358@gmail.com</a></div>
+
+    <p class="ctsub rv" data-t="cs">Open to collaborations, internships, and interesting backend projects.</p>
+
+    <div class="socrow rv">
+        <a href="https://www.instagram.com/yeaska.exp/" class="socard" target="_blank" rel="noopener">
+            <span class="soico">📸</span>
+            <div><div class="sonm">Instagram</div><div class="sohdl">@yeaska.exp</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yeraska-exp-4b735a387/" class="socard" target="_blank" rel="noopener">
+            <span class="soico">💼</span>
+            <div><div class="sonm">LinkedIn</div><div class="sohdl">Yeraska Exp</div></div>
+        </a>
+        <a href="https://t.me/exp075" class="socard" target="_blank" rel="noopener">
+            <span class="soico">✈️</span>
+            <div><div class="sonm">Telegram</div><div class="sohdl">@exp075</div></div>
+        </a>
+        <a href="https://github.com/yeaska0" class="socard" target="_blank" rel="noopener">
+            <span class="soico">🐙</span>
+            <div><div class="sonm">GitHub</div><div class="sohdl">yeaska0</div></div>
+        </a>
+    </div>
+
+    <div class="rv">
+        <a href="mailto:ersik0358@gmail.com" class="elink">📧 &nbsp;ersik0358@gmail.com</a>
+    </div>
 </section>
 
+<!-- ── FOOTER ─────────────────────────── -->
 <footer>
     <div class="flogo">ItYerasyl0.dev</div>
     <p>© 2026 · ItYerasyl0 · Taraz, Kazakhstan</p>
     <div class="fstat"><div class="fdot"></div><span data-t="fa">Open to Internship</span></div>
 </footer>
-<button id="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- Back to top -->
+<button id="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
 <script src="main.js"></script>
 </body>
 </html>

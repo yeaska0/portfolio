@@ -233,60 +233,6 @@ function togTheme() {
     if (btn) btn.textContent = dark ? '🌙' : '☀️';
 }
 
-/* ─────────────────────────────────────────
-   AUTH
-───────────────────────────────────────── */
-function getU() { return JSON.parse(localStorage.getItem('iy_u') || '[]'); }
-function setU(u) { localStorage.setItem('iy_u', JSON.stringify(u)); }
-
-function stab(t) {
-    document.getElementById('fli').style.display  = t === 'li' ? 'block' : 'none';
-    document.getElementById('frg').style.display  = t === 'rg' ? 'block' : 'none';
-    document.getElementById('tli').classList.toggle('on', t === 'li');
-    document.getElementById('trg').classList.toggle('on', t === 'rg');
-}
-
-function showE(id, msg) {
-    const e = document.getElementById(id);
-    if (!e) return;
-    e.textContent = msg;
-    e.classList.add('show');
-    setTimeout(() => e.classList.remove('show'), 3500);
-}
-
-function doLi() {
-    const em = document.getElementById('lie').value.trim();
-    const pw = document.getElementById('lip').value;
-    if (!em.includes('@')) return showE('eli', TR[lang].ee);
-    if (pw.length < 6)     return showE('eli', TR[lang].ep);
-    const u = getU().find(x => x.e === em);
-    if (!u)                return showE('eli', TR[lang].enf);
-    if (u.p !== btoa(pw)) return showE('eli', TR[lang].ew);
-    enter();
-}
-
-function doRg() {
-    const nm = document.getElementById('rna').value.trim();
-    const em = document.getElementById('rem').value.trim();
-    const pw = document.getElementById('rpa').value;
-    if (!nm)               return showE('erg', TR[lang].en);
-    if (!em.includes('@')) return showE('erg', TR[lang].ee);
-    if (pw.length < 6)     return showE('erg', TR[lang].ep);
-    const us = getU();
-    if (us.find(x => x.e === em)) return showE('erg', TR[lang].ex);
-    us.push({ n: nm, e: em, p: btoa(pw) });
-    setU(us);
-    enter();
-}
-
-function guest() { enter(); }
-
-function enter() {
-    const a = document.getElementById('auth');
-    if (!a) return;
-    a.classList.add('out');
-    setTimeout(() => { a.style.display = 'none'; }, 600);
-}
 
 /* ─────────────────────────────────────────
    CUSTOM CURSOR

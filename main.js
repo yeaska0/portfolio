@@ -60,7 +60,7 @@ const TR = {
         ex: 'Email already registered', enf: 'User not found', ew: 'Wrong password',
         hcv: 'Download CV',
 
-        ned: 'Education', edh: 'Education',
+        edh: 'Education',
         edn1: 'M.Kh. Dulati Taraz University',
         edd1: 'Information Systems & Technology',
         edst: 'Current · GPA 3.5',
@@ -201,7 +201,7 @@ const TR = {
 /* ─────────────────────────────────────────
    LANGUAGE
 ───────────────────────────────────────── */
-let lang = 'ru';
+let lang = 'en';
 
 function sl(l) {
     lang = l;
@@ -419,3 +419,8 @@ if (totop) {
         totop.classList.toggle('show', scrollY > 400);
     }, { passive: true });
 }
+
+/* ─────────────────────────────────────────
+   INIT LANGUAGE
+───────────────────────────────────────── */
+sl(lang);

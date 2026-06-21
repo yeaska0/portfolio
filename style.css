@@ -426,6 +426,8 @@ nav.stuck {
     gap: 64px;
     align-items: center;
     max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .hinner { }
@@ -905,9 +907,6 @@ footer p { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var
     footer        { flex-direction: column; text-align: center; padding: 22px 20px; }
     .socrow       { gap: 9px; }
     .socard       { min-width: 130px; flex: 1; }
-    .timeline::before { left: 62px; }
-    .titem        { grid-template-columns: 62px 1fr; }
-    .tdot         { left: 55px; }
     .cert-grid    { grid-template-columns: 1fr; }
     .edu-card     { flex-direction: column; }
 }

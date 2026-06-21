@@ -3,7 +3,7 @@
 ───────────────────────────────────────── */
 const TR = {
     en: {
-        as: 'Backend Developer',
+        as: 'Student',
         tli: 'Sign In', trg: 'Sign Up',
         le: 'Email', lp: 'Password', ln: 'Name',
         bli: 'Sign In →', brg: 'Create Account →',
@@ -12,16 +12,16 @@ const TR = {
         na: 'About', ns: 'Skills', np: 'Projects',
         nrm: 'Roadmap', nc: 'Contact', ned: 'Education',
 
-        hb: 'Backend Developer · Taraz, Kazakhstan',
-        hn1: 'Yerasyl', hr: 'Backend Engineer',
-        hd: 'Backend-focused Software Engineering Student from Kazakhstan. Building Java, Python and SQL projects. Passionate about scalable systems, API development and databases.',
+        hb: 'Student · Taraz, Kazakhstan',
+        hn1: 'Yerasyl', hr: 'Software Dev Student',
+        hd: 'Software Engineering Student from Kazakhstan. Building Java, Python and SQL projects. Passionate about programming, databases and scalable systems.',
         hb1: 'View My Work', hb2: 'Get in Touch',
         sc: 'Scroll to explore',
 
         ah: 'Building systems<br>that scale.',
-        ap1: 'I\'m <strong>Yerasyl</strong> — a backend-focused developer and student at <strong>Taraz M.Kh. Dulati University</strong>, Department of <span class="hi">Information Systems &amp; Technology</span>.',
+        ap1: 'I\'m <strong>Yerasyl</strong> — a developer and student at <strong>Taraz M.Kh. Dulati University</strong>, Department of <span class="hi">Information Systems &amp; Technology</span>.',
         ap2: 'I know <strong>4 programming languages</strong>: Java (main), Python, C++ and SQL. Working on a <strong>MacBook Air M4</strong> — fast builds, clean workflow. Git in every project.',
-        ap3: 'Actively seeking <strong>internship opportunities</strong>. My goal: become a <strong>world-class backend engineer</strong> who ships fast, reliable, elegant systems.',
+        ap3: 'Actively seeking <strong>internship opportunities</strong>. My goal: become a <strong>world-class developer</strong> who ships fast, reliable, elegant systems.',
 
         iu: 'University', id: 'Department', idv: 'IS & Technology',
         ic: 'Campus', icv: 'Tech Building',
@@ -70,7 +70,7 @@ const TR = {
     },
 
     ru: {
-        as: 'Бэкенд Разработчик',
+        as: 'Студент',
         tli: 'Войти', trg: 'Регистрация',
         le: 'Email', lp: 'Пароль', ln: 'Имя',
         bli: 'Войти →', brg: 'Создать аккаунт →',
@@ -79,16 +79,16 @@ const TR = {
         na: 'Обо мне', ns: 'Навыки', np: 'Проекты',
         nrm: 'Роадмап', nc: 'Контакты', ned: 'Образование',
 
-        hb: 'Бэкенд Разработчик · Тараз, Казахстан',
-        hn1: 'Ерасыл', hr: 'Backend-инженер',
-        hd: 'Студент-разработчик с фокусом на бэкенде из Казахстана. Строю проекты на Java, Python и SQL. Увлечён масштабируемыми системами, разработкой API и базами данных.',
+        hb: 'Студент · Тараз, Казахстан',
+        hn1: 'Ерасыл', hr: 'Студент-разработчик',
+        hd: 'Студент-разработчик из Казахстана. Строю проекты на Java, Python и SQL. Увлечён программированием, базами данных и масштабируемыми системами.',
         hb1: 'Мои проекты', hb2: 'Написать мне',
         sc: 'Прокрутите вниз',
 
         ah: 'Создаю системы,<br>которые работают.',
-        ap1: 'Я <strong>Ерасыл</strong> — backend-разработчик, студент <strong>Таразского университета им. М.Х. Дулати</strong>, кафедра <span class="hi">Информационных систем и технологий</span>.',
+        ap1: 'Я <strong>Ерасыл</strong> — разработчик и студент <strong>Таразского университета им. М.Х. Дулати</strong>, кафедра <span class="hi">Информационных систем и технологий</span>.',
         ap2: 'Знаю <strong>4 языка программирования</strong>: Java (основной), Python, C++ и SQL. Работаю на <strong>MacBook Air M4</strong> — быстрые сборки, чистый рабочий процесс.',
-        ap3: 'Активно ищу <strong>стажировку</strong>. Цель — стать <strong>первоклассным backend-инженером</strong>, создающим быстрые, надёжные и элегантные системы.',
+        ap3: 'Активно ищу <strong>стажировку</strong>. Цель — стать <strong>первоклассным разработчиком</strong>, создающим быстрые, надёжные и элегантные системы.',
 
         iu: 'Университет', id: 'Кафедра', idv: 'Информационные системы и технологии',
         ic: 'Корпус', icv: 'Технологический',
@@ -119,7 +119,7 @@ const TR = {
         rm5t: 'Middle Backend Developer', rm5d: 'Архитектурные решения на бэкенде. Высоконагруженные системы, распределённые вычисления',
 
         ch1: 'Давайте', ch2: 'создадим вместе',
-        cs: 'Открыт к сотрудничеству, стажировкам и интересным backend-проектам.',
+        cs: 'Открыт к сотрудничеству, стажировкам и интересным проектам.',
         fa: 'Открыт к стажировке',
 
         ghrep: 'Репо', ghlang: 'Основной язык', ghact: 'Статус',
@@ -137,7 +137,7 @@ const TR = {
     },
 
     kz: {
-        as: 'Backend Әзірлеуші',
+        as: 'Студент',
         tli: 'Кіру', trg: 'Тіркелу',
         le: 'Email', lp: 'Құпия сөз', ln: 'Атыңыз',
         bli: 'Кіру →', brg: 'Аккаунт жасау →',
@@ -146,16 +146,16 @@ const TR = {
         na: 'Мен туралы', ns: 'Дағдылар', np: 'Жобалар',
         nrm: 'Жол карта', nc: 'Байланыс', ned: 'Білім',
 
-        hb: 'Backend Әзірлеуші · Тараз, Қазақстан',
-        hn1: 'Ерасыл', hr: 'Backend-инженер',
-        hd: 'Қазақстандық backend бағытындағы студент-бағдарламашы. Java, Python және SQL жобалар жасаймын. Масштабталатын жүйелерге, API және дерекқорларға құштармын.',
+        hb: 'Студент · Тараз, Қазақстан',
+        hn1: 'Ерасыл', hr: 'Студент-бағдарламашы',
+        hd: 'Қазақстандық студент-бағдарламашы. Java, Python және SQL жобалар жасаймын. Бағдарламалауға, дерекқорларға және масштабталатын жүйелерге құштармын.',
         hb1: 'Жобаларым', hb2: 'Байланысу',
         sc: 'Төмен жылжыңыз',
 
         ah: 'Жұмыс істейтін<br>жүйелер жасаймын.',
-        ap1: 'Мен <strong>Ерасыл</strong> — <strong>М.Х. Дулати атындағы Тараз университетінің</strong> <span class="hi">Ақпараттық жүйелер және технологиялар</span> кафедрасының студентімін.',
+        ap1: 'Мен <strong>Ерасыл</strong> — бағдарламашы, <strong>М.Х. Дулати атындағы Тараз университетінің</strong> <span class="hi">Ақпараттық жүйелер және технологиялар</span> кафедрасының студентімін.',
         ap2: '<strong>4 бағдарламалау тілін</strong> білемін: Java (негізгі), Python, C++ және SQL. <strong>MacBook Air M4</strong>-те жұмыс жасаймын — жылдам жинақтар, таза жұмыс үрдісі.',
-        ap3: 'Белсенді түрде <strong>тәжірибе іздеп</strong> жатырмын. Мақсатым — жылдам, сенімді жүйелер жасайтын <strong>дүниежүзілік деңгейдегі backend-инженер</strong> болу.',
+        ap3: 'Белсенді түрде <strong>тәжірибе іздеп</strong> жатырмын. Мақсатым — жылдам, сенімді жүйелер жасайтын <strong>дүниежүзілік деңгейдегі бағдарламашы</strong> болу.',
 
         iu: 'Университет', id: 'Кафедра', idv: 'Ақпараттық жүйелер және технологиялар',
         ic: 'Корпус', icv: 'Технологиялық',
@@ -186,7 +186,7 @@ const TR = {
         rm5t: 'Middle Backend Developer', rm5d: 'Backend архитектура шешімдері. Жоғары жүктелім жүйелері, таратылған есептеу',
 
         ch1: 'Бірге', ch2: 'жасайық',
-        cs: 'Ынтымақтастыққа, тәжірибеге және қызықты backend жобаларына ашықпын.',
+        cs: 'Ынтымақтастыққа, тәжірибеге және қызықты жобаларға ашықпын.',
         fa: 'Тәжірибеге дайын',
 
         ghrep: 'Репо', ghlang: 'Негізгі тіл', ghact: 'Мәртебе',

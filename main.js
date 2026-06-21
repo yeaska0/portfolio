@@ -65,6 +65,8 @@ const TR = {
         edd1: 'Information Systems & Technology',
         edst: 'Current · GPA 3.5',
         certh: 'Certificates',
+        cfn: 'Your Name', cfe: 'Your Email', cfm: 'Message', cfs: 'Send Message', cfsent: 'Sent! ✓',
+        skprof: 'Proficiency',
     },
 
     ru: {
@@ -130,6 +132,8 @@ const TR = {
         edd1: 'Информационные системы и технологии',
         edst: 'Сейчас · GPA 3.5',
         certh: 'Сертификаты',
+        cfn: 'Ваше имя', cfe: 'Ваш Email', cfm: 'Сообщение', cfs: 'Отправить', cfsent: 'Отправлено! ✓',
+        skprof: 'Уровень владения',
     },
 
     kz: {
@@ -195,6 +199,8 @@ const TR = {
         edd1: 'Ақпараттық жүйелер және технологиялар',
         edst: 'Қазір · GPA 3.5',
         certh: 'Сертификаттар',
+        cfn: 'Атыңыз', cfe: 'Email-іңіз', cfm: 'Хабарлама', cfs: 'Жіберу', cfsent: 'Жіберілді! ✓',
+        skprof: 'Деңгей',
     }
 };
 
@@ -368,13 +374,20 @@ const obs = new IntersectionObserver(entries => {
     });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.rv, .rvl, .rvr').forEach(el => obs.observe(el));
+document.querySelectorAll('.rv, .rvl, .rvr, .titem').forEach(el => obs.observe(el));
 
 /* ─────────────────────────────────────────
    TOOL TILES STAGGER
 ───────────────────────────────────────── */
 document.querySelectorAll('.ttile').forEach((t, i) => {
     t.style.transitionDelay = (i * 0.05) + 's';
+});
+
+/* ─────────────────────────────────────────
+   ROADMAP STAGGER
+───────────────────────────────────────── */
+document.querySelectorAll('.titem').forEach((t, i) => {
+    t.style.transitionDelay = (i * 0.12) + 's';
 });
 
 /* ─────────────────────────────────────────
@@ -418,6 +431,20 @@ if (totop) {
     window.addEventListener('scroll', () => {
         totop.classList.toggle('show', scrollY > 400);
     }, { passive: true });
+}
+
+/* ─────────────────────────────────────────
+   CONTACT FORM
+───────────────────────────────────────── */
+const cform = document.getElementById('cform');
+if (cform) {
+    cform.addEventListener('submit', () => {
+        const btn = cform.querySelector('.cfbtn');
+        if (btn) {
+            btn.textContent = (TR[lang] && TR[lang].cfsent) ? TR[lang].cfsent : 'Sending...';
+            btn.disabled = true;
+        }
+    });
 }
 
 /* ─────────────────────────────────────────

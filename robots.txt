@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-eight-ashy-538vqpia0p.vercel.app/sitemap.xml

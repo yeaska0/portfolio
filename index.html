@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -106,6 +107,7 @@
         <li><a href="#education" data-t="ned">Education</a></li>
         <li><a href="#skills"    data-t="ns">Skills</a></li>
         <li><a href="#projects"  data-t="np">Projects</a></li>
+        <li><a href="#roadmap"   data-t="nrm">Roadmap</a></li>
         <li><a href="#contact"   data-t="nc">Contact</a></li>
     </ul>
     <button class="nbg" id="nbg" aria-label="Menu">
@@ -120,6 +122,7 @@
     <a href="#education" class="nmlink" data-t="ned">Education</a>
     <a href="#skills"    class="nmlink" data-t="ns">Skills</a>
     <a href="#projects"  class="nmlink" data-t="np">Projects</a>
+    <a href="#roadmap"   class="nmlink" data-t="nrm">Roadmap</a>
     <a href="#contact"   class="nmlink" data-t="nc">Contact</a>
 </div>
 
@@ -163,6 +166,7 @@
             <div class="hbtns">
                 <a href="#projects" class="btn btnp"><span data-t="hb1">View My Work</span> →</a>
                 <a href="#contact"  class="btn btno"><span data-t="hb2">Get in Touch</span></a>
+                <a href="./cv.pdf" class="btn btno" download><span data-t="hcv">Download CV</span> ↓</a>
             </div>
 
             <div class="hsocials">
@@ -263,6 +267,15 @@
 
         <!-- Right -->
         <div class="rvr" style="display:flex;flex-direction:column;gap:20px">
+
+            <!-- Avatar -->
+            <div class="av-card">
+                <div class="av-avatar"><span class="av-initials">YB</span></div>
+                <div class="av-name">Yerasyl Berdibek</div>
+                <div class="av-role" data-t="as">Backend Developer</div>
+                <div class="av-loc">📍 Taraz, Kazakhstan 🇰🇿</div>
+            </div>
+
             <div class="statgrid">
                 <div class="sbox">
                     <span class="sn" data-tg="4">0</span>
@@ -325,6 +338,33 @@
                     <span class="stag">DB</span>
                 </div>
             </div>
+
+            <!-- GitHub -->
+            <div class="gh-card">
+                <div class="gh-head">
+                    <span class="gh-ico">🐙</span>
+                    <div>
+                        <div class="gh-nm">yeaska0</div>
+                        <div class="gh-sub">github.com/yeaska0</div>
+                    </div>
+                    <a href="https://github.com/yeaska0" class="plink" target="_blank" rel="noopener">View →</a>
+                </div>
+                <div class="gh-row">
+                    <div class="gh-stat">
+                        <span class="ghsn" data-tg="3">0</span>
+                        <span class="ghsl" data-t="ghrep">Repos</span>
+                    </div>
+                    <div class="gh-stat">
+                        <span class="ghsn">Java</span>
+                        <span class="ghsl" data-t="ghlang">Main Lang</span>
+                    </div>
+                    <div class="gh-stat">
+                        <span class="ghsn active">Active</span>
+                        <span class="ghsl" data-t="ghact">Status</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -444,6 +484,34 @@
         <div class="ttile"><div class="tico">🖥️</div><div class="tnm">iTerm2</div></div>
         <div class="ttile"><div class="tico">🌐</div><div class="tnm">WebStorm</div></div>
     </div>
+
+    <div class="cert-title rv" style="margin-top:48px" data-t="skprof">Proficiency</div>
+    <div class="skillbars rv">
+        <div class="skbar">
+            <div class="skbar-hd"><span>Java</span><span class="skbar-pct">70%</span></div>
+            <div class="skbar-track"><div class="skbar-fill" style="--w:70%;background:linear-gradient(90deg,var(--a1),var(--a2))"></div></div>
+        </div>
+        <div class="skbar">
+            <div class="skbar-hd"><span>Git</span><span class="skbar-pct">75%</span></div>
+            <div class="skbar-track"><div class="skbar-fill" style="--w:75%;background:linear-gradient(90deg,var(--a2),var(--a1))"></div></div>
+        </div>
+        <div class="skbar">
+            <div class="skbar-hd"><span>SQL</span><span class="skbar-pct">65%</span></div>
+            <div class="skbar-track"><div class="skbar-fill" style="--w:65%;background:linear-gradient(90deg,var(--a3),var(--a1))"></div></div>
+        </div>
+        <div class="skbar">
+            <div class="skbar-hd"><span>Python</span><span class="skbar-pct">55%</span></div>
+            <div class="skbar-track"><div class="skbar-fill" style="--w:55%;background:linear-gradient(90deg,var(--a1),var(--a3))"></div></div>
+        </div>
+        <div class="skbar">
+            <div class="skbar-hd"><span>C++</span><span class="skbar-pct">40%</span></div>
+            <div class="skbar-track"><div class="skbar-fill" style="--w:40%;background:linear-gradient(90deg,var(--a4),var(--a2))"></div></div>
+        </div>
+        <div class="skbar">
+            <div class="skbar-hd"><span>MySQL</span><span class="skbar-pct">60%</span></div>
+            <div class="skbar-track"><div class="skbar-fill" style="--w:60%;background:linear-gradient(90deg,var(--a4),var(--a1))"></div></div>
+        </div>
+    </div>
 </section>
 
 <!-- ══════════════════════════════════════
@@ -532,10 +600,51 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     CONTACT  §05
+     ROADMAP  §05
+══════════════════════════════════════ -->
+<section id="roadmap" class="sec">
+    <div class="eyebrow">05 · <span data-t="nrm">Roadmap</span></div>
+    <div class="sectitle rv" data-t="rmh">Backend Career Path</div>
+
+    <div class="timeline">
+        <div class="titem done">
+            <div class="tdot"></div>
+            <div class="tyr">2024</div>
+            <div class="ttl" data-t="rm1t">Started University</div>
+            <div class="tds" data-t="rm1d">M.Kh. Dulati University · IS & Technology · Learning C++, Python, SQL basics</div>
+        </div>
+        <div class="titem current">
+            <div class="tdot"></div>
+            <div class="tyr">2025 – 2026</div>
+            <div class="ttl" data-t="rm2t">Java & Spring Boot</div>
+            <div class="tds" data-t="rm2d">Mastering Java Core, Spring Boot, PostgreSQL, REST API, JWT, Docker</div>
+        </div>
+        <div class="titem">
+            <div class="tdot"></div>
+            <div class="tyr">2026 – 2027</div>
+            <div class="ttl" data-t="rm3t">Real Projects & Internship</div>
+            <div class="tds" data-t="rm3d">Building production-ready backend projects. Actively seeking first internship opportunity</div>
+        </div>
+        <div class="titem">
+            <div class="tdot"></div>
+            <div class="tyr">2027 – 2028</div>
+            <div class="ttl" data-t="rm4t">Junior Backend Developer</div>
+            <div class="tds" data-t="rm4d">Graduate & land first full-time backend role. Microservices, CI/CD, Kubernetes</div>
+        </div>
+        <div class="titem">
+            <div class="tdot"></div>
+            <div class="tyr">2028+</div>
+            <div class="ttl" data-t="rm5t">Middle Backend Developer</div>
+            <div class="tds" data-t="rm5d">Lead backend architecture decisions. High-load systems, distributed computing</div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT  §06
 ══════════════════════════════════════ -->
 <section id="contact" class="sec sec-alt">
-    <div class="eyebrow" style="justify-content:center">05 · <span data-t="nc">Contact</span></div>
+    <div class="eyebrow" style="justify-content:center">06 · <span data-t="nc">Contact</span></div>
 
     <div class="ctbig rv">
         <span data-t="ch1">Let's</span><span class="stroke"> build</span><br>
@@ -566,6 +675,28 @@
     <div class="rv">
         <a href="mailto:ersik0358@gmail.com" class="elink">📧 &nbsp;ersik0358@gmail.com</a>
     </div>
+
+    <form class="cform rv" id="cform"
+          action="https://formsubmit.co/ersik0358@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Portfolio Contact — ItYerasyl0.dev">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://portfolio-eight-ashy-538vqpia0p.vercel.app/">
+        <div class="cfinp-row">
+            <div class="cfinp-wrap">
+                <label class="cflabel" data-t="cfn">Your Name</label>
+                <input class="cfinp" type="text" name="name" placeholder="Yerasyl" required>
+            </div>
+            <div class="cfinp-wrap">
+                <label class="cflabel" data-t="cfe">Your Email</label>
+                <input class="cfinp" type="email" name="email" placeholder="you@example.com" required>
+            </div>
+        </div>
+        <div class="cfinp-wrap">
+            <label class="cflabel" data-t="cfm">Message</label>
+            <textarea class="cfinp" name="message" rows="5" placeholder="Hi Yerasyl..." required></textarea>
+        </div>
+        <button type="submit" class="cfbtn"><span data-t="cfs">Send Message</span> →</button>
+    </form>
 </section>
 
 <!-- ── FOOTER ─────────────────────────── -->

@@ -9,10 +9,10 @@
     <meta property="og:url"         content="https://portfolio-eight-ashy-538vqpia0p.vercel.app/">
     <meta property="og:title"       content="ItYerasyl0.dev — Student Developer">
     <meta property="og:description" content="Software Engineering Student from Taraz, Kazakhstan">
-    <meta name="theme-color"        content="#04060a">
+    <meta name="theme-color"        content="#060014">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -30,107 +30,101 @@
     </div>
 </div>
 
-
 <!-- Scroll progress -->
 <div id="nprog"></div>
 
-<!-- ── TOPBAR ────────────────────────────── -->
-<div id="topbar">
-    <div class="lpills">
-        <button class="lpill on" data-lang="en" onclick="sl('en')">EN</button>
-        <button class="lpill"    data-lang="ru" onclick="sl('ru')">RU</button>
-        <button class="lpill"    data-lang="kz" onclick="sl('kz')">KZ</button>
-    </div>
-    <button class="tbtn" id="thbtn" onclick="togTheme()">🌙</button>
-</div>
-
-<!-- ── NAV ──────────────────────────────── -->
+<!-- ── FLOATING NAV ──────────────────────── -->
 <nav id="nav">
-    <div class="nlogo"><span>ItYerasyl0</span>.dev<em>_</em></div>
-    <ul class="nlinks">
-        <li><a href="#about"     data-t="na">About</a></li>
-        <li><a href="#education" data-t="ned">Education</a></li>
-        <li><a href="#skills"    data-t="ns">Skills</a></li>
-        <li><a href="#projects"  data-t="np">Projects</a></li>
-        <li><a href="#contact"   data-t="nc">Contact</a></li>
-    </ul>
-    <button class="nbg" id="nbg" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
+    <div class="npill">
+        <a class="nlogo" href="#"><span>ItYerasyl0</span>.dev<em>_</em></a>
+        <ul class="nlinks">
+            <li><a href="#about"     data-t="na">About</a></li>
+            <li><a href="#education" data-t="ned">Education</a></li>
+            <li><a href="#skills"    data-t="ns">Skills</a></li>
+            <li><a href="#projects"  data-t="np">Projects</a></li>
+            <li><a href="#contact"   data-t="nc">Contact</a></li>
+        </ul>
+        <div class="nav-r">
+            <div class="lpills">
+                <button class="lpill on" data-lang="en" onclick="sl('en')">EN</button>
+                <button class="lpill"    data-lang="ru" onclick="sl('ru')">RU</button>
+                <button class="lpill"    data-lang="kz" onclick="sl('kz')">KZ</button>
+            </div>
+            <button class="tbtn" id="thbtn" onclick="togTheme()">🌙</button>
+            <button class="nbg" id="nbg" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
 </nav>
 
 <!-- Mobile drawer -->
 <div class="novlay" id="nov" onclick="closeMob()"></div>
 <div class="ndrawer" id="ndr">
-    <a href="#about"     class="nmlink" data-t="na">About</a>
-    <a href="#education" class="nmlink" data-t="ned">Education</a>
-    <a href="#skills"    class="nmlink" data-t="ns">Skills</a>
-    <a href="#projects"  class="nmlink" data-t="np">Projects</a>
-    <a href="#contact"   class="nmlink" data-t="nc">Contact</a>
+    <a href="#about"     class="nmlink" onclick="closeMob()" data-t="na">About</a>
+    <a href="#education" class="nmlink" onclick="closeMob()" data-t="ned">Education</a>
+    <a href="#skills"    class="nmlink" onclick="closeMob()" data-t="ns">Skills</a>
+    <a href="#projects"  class="nmlink" onclick="closeMob()" data-t="np">Projects</a>
+    <a href="#contact"   class="nmlink" onclick="closeMob()" data-t="nc">Contact</a>
+    <div class="nd-lang">
+        <button class="lpill on" data-lang="en" onclick="sl('en');closeMob()">EN</button>
+        <button class="lpill"    data-lang="ru" onclick="sl('ru');closeMob()">RU</button>
+        <button class="lpill"    data-lang="kz" onclick="sl('kz');closeMob()">KZ</button>
+    </div>
 </div>
 
 <!-- ══════════════════════════════════════
      HERO
 ══════════════════════════════════════ -->
 <section id="hero">
+    <!-- Background layers -->
     <div class="hbg"></div>
     <div class="hgrid"></div>
-
-    <!-- Floating orbs -->
-    <div class="orb" style="width:420px;height:420px;background:color-mix(in srgb,var(--a1) 6%,transparent);top:-80px;right:-80px;--d:10s;--dl:0s"></div>
-    <div class="orb" style="width:340px;height:340px;background:color-mix(in srgb,var(--a2) 6%,transparent);bottom:-60px;left:-60px;--d:12s;--dl:-4s"></div>
-    <div class="orb" style="width:200px;height:200px;background:color-mix(in srgb,var(--a3) 4%,transparent);top:45%;right:28%;--d:8s;--dl:-2s"></div>
+    <div class="aurora au1"></div>
+    <div class="aurora au2"></div>
+    <div class="aurora au3"></div>
 
     <div class="hcontent">
         <!-- Left: text -->
         <div class="hinner">
-            <div class="hbadge">
+            <div class="hbadge" style="animation:fu .6s .1s both">
                 <span class="bdot"></span>
-                <span data-t="hb">Backend Developer · Taraz, Kazakhstan</span>
+                <span data-t="hb">Student · Taraz, Kazakhstan</span>
             </div>
 
-            <div class="hname">
+            <h1 class="hname">
                 <span class="hn1" data-t="hn1">Yerasyl</span>
                 <span class="hn2">Student Dev</span>
-            </div>
+            </h1>
 
-            <div class="hrole">
-                <span data-t="hr">Backend Engineer</span>
+            <div class="hrole" style="animation:fu .65s .7s both">
+                <span data-t="hr">Software Dev Student</span>
                 &nbsp;/&nbsp;
                 <span class="hl">ItYerasyl0</span>
             </div>
 
-            <p class="hdesc" data-t="hd">
+            <p class="hdesc" data-t="hd" style="animation:fu .65s .9s both">
                 Software Engineering Student from Kazakhstan.
                 Building Java, Python and SQL projects. Passionate about programming,
                 databases and scalable systems.
             </p>
 
-            <div class="hbtns">
-                <a href="#projects" class="btn btnp"><span data-t="hb1">View My Work</span> →</a>
-                <a href="#contact"  class="btn btno"><span data-t="hb2">Get in Touch</span></a>
-                <a href="./cv.pdf" class="btn btno" download><span data-t="hcv">Download CV</span> ↓</a>
+            <div class="hbtns" style="animation:fu .65s 1.1s both">
+                <a href="#projects" class="btn btnp mag"><span data-t="hb1">View My Work</span> →</a>
+                <a href="#contact"  class="btn btno mag"><span data-t="hb2">Get in Touch</span></a>
+                <a href="./cv.pdf" class="btn btno mag" download><span data-t="hcv">Download CV</span> ↓</a>
             </div>
 
-            <div class="hsocials">
+            <div class="hsocials" style="animation:fu .65s 1.25s both">
                 <a href="https://www.instagram.com/yeaska.exp/" target="_blank" rel="noopener" class="schip">📸 Instagram</a>
                 <a href="https://t.me/exp075"                   target="_blank" rel="noopener" class="schip">✈️ Telegram</a>
                 <a href="https://github.com/yeaska0"            target="_blank" rel="noopener" class="schip">🐙 GitHub</a>
                 <a href="mailto:ersik0358@gmail.com"            class="schip">📧 Email</a>
             </div>
-
-            <div class="hchips">
-                <span class="chip">Java</span>
-                <span class="chip">Python</span>
-                <span class="chip">C++</span>
-                <span class="chip">SQL</span>
-                <span class="chip">Git</span>
-                <span class="chip">MacBook M4</span>
-            </div>
         </div>
 
-        <!-- Right: Terminal card (hidden on mobile) -->
-        <div class="hterm">
+        <!-- Right: Terminal -->
+        <div class="hterm" style="animation:fu .65s 1.0s both">
             <div class="terminal-card">
                 <div class="term-bar">
                     <span class="term-dot" style="background:#ff5f57"></span>
@@ -140,7 +134,7 @@
                 </div>
                 <div class="term-body">
                     <div class="term-line"><span class="term-prompt">$ </span>whoami</div>
-                    <div class="term-line term-out">Yerasyl</div>
+                    <div class="term-line term-out">Yerasyl Yeskermes</div>
                     <div class="term-line">&nbsp;</div>
                     <div class="term-line"><span class="term-prompt">$ </span>cat role.txt</div>
                     <div class="term-line term-cyan">Student Developer · CS Enthusiast</div>
@@ -161,6 +155,36 @@
         </div>
     </div>
 
+    <!-- Tech marquee strip -->
+    <div class="h-marquee" style="animation:fu .6s 1.6s both">
+        <div class="marquee-track">
+            <span class="mtag">Java</span><span class="msep">·</span>
+            <span class="mtag">Python</span><span class="msep">·</span>
+            <span class="mtag">C++</span><span class="msep">·</span>
+            <span class="mtag">SQL</span><span class="msep">·</span>
+            <span class="mtag">Spring Boot</span><span class="msep">·</span>
+            <span class="mtag">PostgreSQL</span><span class="msep">·</span>
+            <span class="mtag">Git</span><span class="msep">·</span>
+            <span class="mtag">macOS</span><span class="msep">·</span>
+            <span class="mtag">IntelliJ IDEA</span><span class="msep">·</span>
+            <span class="mtag">REST API</span><span class="msep">·</span>
+            <span class="mtag">MySQL</span><span class="msep">·</span>
+            <span class="mtag">JWT</span><span class="msep">·</span>
+            <span class="mtag">Java</span><span class="msep">·</span>
+            <span class="mtag">Python</span><span class="msep">·</span>
+            <span class="mtag">C++</span><span class="msep">·</span>
+            <span class="mtag">SQL</span><span class="msep">·</span>
+            <span class="mtag">Spring Boot</span><span class="msep">·</span>
+            <span class="mtag">PostgreSQL</span><span class="msep">·</span>
+            <span class="mtag">Git</span><span class="msep">·</span>
+            <span class="mtag">macOS</span><span class="msep">·</span>
+            <span class="mtag">IntelliJ IDEA</span><span class="msep">·</span>
+            <span class="mtag">REST API</span><span class="msep">·</span>
+            <span class="mtag">MySQL</span><span class="msep">·</span>
+            <span class="mtag">JWT</span><span class="msep">·</span>
+        </div>
+    </div>
+
     <div class="scue">
         <div class="smouse"><div class="swheel"></div></div>
         <span data-t="sc">Scroll to explore</span>
@@ -178,7 +202,7 @@
         <div class="rvl">
             <div class="sectitle" data-t="ah">Building systems<br>that scale.</div>
 
-            <p data-t="ap1">I'm <strong>Yerasyl</strong> — a backend-focused developer and student at
+            <p data-t="ap1">I'm <strong>Yerasyl</strong> — a developer and student at
                 <strong>Taraz M.Kh. Dulati University</strong> (since 2024), Department of
                 <span class="hi">Information Systems &amp; Technology</span>.</p>
 
@@ -186,7 +210,7 @@
                 Working on a <strong>MacBook Air M4</strong> — fast builds, clean workflow. Git in every project.</p>
 
             <p data-t="ap3">Actively seeking <strong>internship opportunities</strong>. My goal: become a
-                <strong>world-class backend engineer</strong> who ships fast, reliable, elegant systems.</p>
+                <strong>world-class developer</strong> who ships fast, reliable, elegant systems.</p>
 
             <div class="infogrid">
                 <div class="icell">
@@ -209,7 +233,7 @@
         </div>
 
         <!-- Right -->
-        <div class="rvr" style="display:flex;flex-direction:column;gap:20px">
+        <div class="rvr" style="display:flex;flex-direction:column;gap:18px">
 
             <div class="statgrid">
                 <div class="sbox">
@@ -351,7 +375,7 @@
 <!-- ══════════════════════════════════════
      SKILLS  §03
 ══════════════════════════════════════ -->
-<section id="skills" class="sec">
+<section id="skills" class="sec sec-alt">
     <div class="eyebrow">03 · <span data-t="ns">Skills</span></div>
     <div class="sectitle rv" data-t="skh">Tech Stack</div>
 
@@ -405,7 +429,7 @@
         <div class="ttile"><div class="tico">🌐</div><div class="tnm">WebStorm</div></div>
     </div>
 
-    <div class="cert-title rv" style="margin-top:48px" data-t="skprof">Proficiency</div>
+    <div class="cert-title rv" style="margin-top:52px" data-t="skprof">Proficiency</div>
     <div class="skillbars rv">
         <div class="skbar">
             <div class="skbar-hd"><span>Java</span><span class="skbar-pct">70%</span></div>
@@ -437,7 +461,7 @@
 <!-- ══════════════════════════════════════
      PROJECTS  §04
 ══════════════════════════════════════ -->
-<section id="projects" class="sec sec-alt">
+<section id="projects" class="sec">
     <div class="eyebrow">04 · <span data-t="np">Projects</span></div>
     <div class="sectitle rv" data-t="ph">Featured Projects</div>
 
@@ -448,7 +472,7 @@
             <div class="pnum">01</div>
             <span class="pstatus live" data-t="ps_live">Live</span>
             <h3 data-t="p1t">Portfolio Site</h3>
-            <p data-t="p1d">Personal developer portfolio — responsive, multi-language (EN/RU/KZ), dark/light mode, auth system, animations. Built from scratch.</p>
+            <p data-t="p1d">Personal developer portfolio — responsive, multi-language (EN/RU/KZ), dark/light mode, smooth animations. Built from scratch with vanilla HTML/CSS/JS.</p>
             <div class="ptags">
                 <span class="ptag">HTML</span>
                 <span class="ptag">CSS</span>
@@ -530,7 +554,7 @@
         <span data-t="ch2">together</span>
     </div>
 
-    <p class="ctsub rv" data-t="cs">Open to collaborations, internships, and interesting backend projects.</p>
+    <p class="ctsub rv" data-t="cs">Open to collaborations, internships, and interesting projects.</p>
 
     <div class="socrow rv">
         <a href="https://www.instagram.com/yeaska.exp/" class="socard" target="_blank" rel="noopener">
@@ -554,13 +578,12 @@
     <div class="rv">
         <a href="mailto:ersik0358@gmail.com" class="elink">📧 &nbsp;ersik0358@gmail.com</a>
     </div>
-
 </section>
 
 <!-- ── FOOTER ─────────────────────────── -->
 <footer>
     <div class="flogo">ItYerasyl0.dev</div>
-    <p>© 2026 · ItYerasyl0 · Taraz, Kazakhstan</p>
+    <p>© 2026 · Yerasyl Yeskermes · Taraz, Kazakhstan</p>
     <div class="fstat"><div class="fdot"></div><span data-t="fa">Open to Internship</span></div>
 </footer>
 

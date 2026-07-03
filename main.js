@@ -387,6 +387,28 @@ if (hn) {
 })();
 
 /* ─────────────────────────────────────────
+   MAGNETIC BUTTONS
+───────────────────────────────────────── */
+(function initMagnetic() {
+    function applyMag(el) {
+        el.addEventListener('mousemove', e => {
+            const r   = el.getBoundingClientRect();
+            const cx  = r.left + r.width  / 2;
+            const cy  = r.top  + r.height / 2;
+            const dx  = (e.clientX - cx) * 0.35;
+            const dy  = (e.clientY - cy) * 0.35;
+            el.style.transform = `translate(${dx}px, ${dy}px)`;
+        });
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = '';
+            el.style.transition = 'transform .45s cubic-bezier(.25,.46,.45,.94)';
+            setTimeout(() => { el.style.transition = ''; }, 450);
+        });
+    }
+    document.querySelectorAll('.mag').forEach(applyMag);
+})();
+
+/* ─────────────────────────────────────────
    LOADER
 ───────────────────────────────────────── */
 window.addEventListener('load', () => {

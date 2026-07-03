@@ -34,7 +34,7 @@ const TR = {
 
         ph: 'Featured Projects',
         p1t: 'Portfolio Site',
-        p1d: 'Personal developer portfolio — responsive, multi-language (EN/RU/KZ), dark/light mode, auth system, animations. Built from scratch.',
+        p1d: 'Personal developer portfolio — responsive, multi-language (EN/RU/KZ), dark/light mode, smooth animations. Built from scratch with vanilla HTML/CSS/JS.',
         p2t: 'Student Management System',
         p2d: 'CRUD system for managing students, grades and courses. REST API with JWT authentication. Spring Boot + PostgreSQL.',
         p3t: 'Telegram Finance Bot',
@@ -101,7 +101,7 @@ const TR = {
 
         ph: 'Избранные проекты',
         p1t: 'Портфолио',
-        p1d: 'Личное портфолио — адаптивное, мультиязычное (EN/RU/KZ), тёмная/светлая тема, система авторизации, анимации. Написано с нуля.',
+        p1d: 'Личное портфолио — адаптивное, мультиязычное (EN/RU/KZ), тёмная/светлая тема, плавные анимации. Написано с нуля на HTML/CSS/JS.',
         p2t: 'Система управления студентами',
         p2d: 'CRUD-система для управления студентами, оценками и курсами. REST API с JWT-аутентификацией. Spring Boot + PostgreSQL.',
         p3t: 'Финансовый Telegram-бот',
@@ -168,7 +168,7 @@ const TR = {
 
         ph: 'Таңдаулы жобалар',
         p1t: 'Портфолио сайт',
-        p1d: 'Жеке developer портфолио — адаптивті, көптілді (EN/RU/KZ), қараңғы/жарық режим, авторизация, анимациялар. Нөлден жазылды.',
+        p1d: 'Жеке developer портфолио — адаптивті, көптілді (EN/RU/KZ), қараңғы/жарық режим, анимациялар. Нөлден HTML/CSS/JS-пен жазылды.',
         p2t: 'Студент Басқару Жүйесі',
         p2d: 'Студенттерді, бағаларды және курстарды басқару CRUD жүйесі. JWT аутентификациясымен REST API. Spring Boot + PostgreSQL.',
         p3t: 'Telegram Қаржы Боты',
@@ -262,14 +262,35 @@ function togTheme() {
 })();
 
 /* ─────────────────────────────────────────
-   STICKY NAV
+   STICKY NAV + SCROLL PROGRESS + ACTIVE
 ───────────────────────────────────────── */
-const navEl = document.getElementById('nav');
-if (navEl) {
-    window.addEventListener('scroll', () => {
-        navEl.classList.toggle('stuck', scrollY > 50);
-    }, { passive: true });
+const navEl   = document.getElementById('nav');
+const nprog   = document.getElementById('nprog');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nlinks a[href^="#"]');
+
+function onScroll() {
+    const sy = scrollY;
+    const dh = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Sticky nav
+    if (navEl) navEl.classList.toggle('stuck', sy > 50);
+
+    // Scroll progress bar
+    if (nprog && dh > 0) nprog.style.width = Math.min(100, (sy / dh) * 100) + '%';
+
+    // Active nav link
+    let current = '';
+    sections.forEach(sec => {
+        if (sy >= sec.offsetTop - 120) current = sec.id;
+    });
+    navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
 }
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 /* ─────────────────────────────────────────
    MOBILE MENU
@@ -323,10 +344,19 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.rv, .rvl, .rvr, .titem').forEach(el => obs.observe(el));
 
 /* ─────────────────────────────────────────
-   TOOL TILES STAGGER
+   STAGGER ANIMATIONS
 ───────────────────────────────────────── */
 document.querySelectorAll('.ttile').forEach((t, i) => {
-    t.style.transitionDelay = (i * 0.05) + 's';
+    t.style.transitionDelay = (i * 0.045) + 's';
+});
+document.querySelectorAll('.pcard').forEach((t, i) => {
+    t.style.transitionDelay = (i * 0.08) + 's';
+});
+document.querySelectorAll('.cert-card').forEach((t, i) => {
+    t.style.transitionDelay = (i * 0.07) + 's';
+});
+document.querySelectorAll('.socard').forEach((t, i) => {
+    t.style.transitionDelay = (i * 0.06) + 's';
 });
 
 /* ─────────────────────────────────────────
